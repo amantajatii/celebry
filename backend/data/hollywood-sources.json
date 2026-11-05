@@ -1,0 +1,57 @@
+[
+  {
+    "id": "zendaya",
+    "name": "Zendaya",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Zendaya_2019_by_Glenn_Francis.jpg/1280px-Zendaya_2019_by_Glenn_Francis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zendaya_2019_by_Glenn_Francis.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Toglenn; Wikimedia Commons; resized reference image",
+    "image": "zendaya.jpg",
+    "sha256": "158434e27c884fbeb57017a717b3c3b6e26079e3d50b058caad2d3400e39beb5"
+  },
+  {
+    "id": "timothee-chalamet",
+    "name": "Timothée Chalamet",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Timoth%C3%A9e_Chalamet-63482_%28cropped%29.jpg/1280px-Timoth%C3%A9e_Chalamet-63482_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Timoth%C3%A9e_Chalamet-63482_(cropped).jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution": "Harald Krichel; Wikimedia Commons; resized reference image",
+    "image": "timothee-chalamet.jpg",
+    "sha256": "74992acbd4737826663f4f196881d1c2ca6da33393098de4da9bcceea94a796c"
+  },
+  {
+    "id": "florence-pugh",
+    "name": "Florence Pugh",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/Florence_Pugh_-_The_Wonder_BFI_London_Film_Festival_Premiere%2C_October_2022_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Florence_Pugh_-_The_Wonder_BFI_London_Film_Festival_Premiere,_October_2022_(cropped).jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "attribution": "Raph_PH; Wikimedia Commons; resized reference image",
+    "image": "florence-pugh.jpg",
+    "sha256": "ba8af9dcb9aeb029865236aa25d5227d64518cc5d6a297da26302a1e04698935"
+  },
+  {
+    "id": "emma-stone",
+    "name": "Emma Stone",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Emma_Stone_at_the_39th_Mill_Valley_Film_Festival_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emma_Stone_at_the_39th_Mill_Valley_Film_Festival_(cropped).jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "attribution": "https://www.flickr.com/photos/marinsd; Wikimedia Commons; resized reference image",
+    "image": "emma-stone.jpg",
+    "sha256": "97f98a6c68fa9ab39da683431eddac22fc79da5afdd3e695b7d88a856644a5a8"
+  },
+  {
+    "id": "ryan-gosling",
+    "name": "Ryan Gosling",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Ryan_Gosling_in_2018.jpg/1280px-Ryan_Gosling_in_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ryan_Gosling_in_2018.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "attribution": "Aubrey Gemignani; Wikimedia Commons; resized reference image",
+    "image": "ryan-gosling.jpg",
+    "sha256": "e71750a90eced8d414d024ce2c2bda8d4f01536bb020edd54a5273df4f1ab433"
+  }
+]
