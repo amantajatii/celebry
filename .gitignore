@@ -10,3 +10,8 @@ backend/data/hollywood/
 backend/data/*.npz
 
 !.env.example
+playwright-report/
+test-results/
+deploy/certs/
+
+.next-e2e/

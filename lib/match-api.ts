@@ -13,6 +13,7 @@ export interface Match {
   cosineSimilarity: number;
 }
 export interface MatchResponse {
+  catalogSize: number;
   matches: Match[];
   metric: 'cosine_similarity';
   notice: string;
@@ -35,7 +36,7 @@ function httpUrl(value: unknown): string {
 }
 export function parseMatches(value: unknown): MatchResponse {
   const body = record(value);
-  if (body.metric !== 'cosine_similarity' || !Array.isArray(body.matches) || body.matches.length !== 5) {
+  if (typeof body.catalogSize !== 'number' || !Number.isInteger(body.catalogSize) || body.catalogSize < 5 || body.metric !== 'cosine_similarity' || !Array.isArray(body.matches) || body.matches.length !== 5) {
     throw new Error('The service returned incomplete results. Please try again.');
   }
   const matches = body.matches.map((value, index): Match => {
@@ -53,10 +54,12 @@ export function parseMatches(value: unknown): MatchResponse {
   if (new Set(matches.map(match => match.celebrity.id)).size !== 5 || matches.some((match, i) => i > 0 && match.cosineSimilarity > matches[i - 1].cosineSimilarity)) {
     throw new Error('The service returned an invalid ranking. Please try again.');
   }
-  return { matches, metric: 'cosine_similarity', notice: text(body.notice) };
+  return { matches, catalogSize: body.catalogSize, metric: 'cosine_similarity', notice: text(body.notice) };
 }
 
 const errors: Record<string, string> = {
+  UPLOAD_TIMEOUT: 'The upload took too long. Check your connection and try again.',
+  UPLOAD_DISCONNECTED: 'Your upload was interrupted. Please try again.',
   NO_FACE: 'No face found. Try a clear, front-facing selfie.',
   MULTIPLE_FACES: 'We found more than one face. Choose a photo with just you.',
   FACE_ALIGNMENT_FAILED: 'We couldn’t align your face. Try a clearer, front-facing photo.',
@@ -88,4 +91,9 @@ export async function findMatches(photo: File, signal: AbortSignal): Promise<Mat
     throw new Error(errors[code] || (response.status === 429 ? errors.RATE_LIMITED : 'Matching could not be completed. Please try again.'));
   }
   return parseMatches(body);
+}
+
+export function celebrityImageUrl(identifier: string): string {
+  const base = (process.env.NEXT_PUBLIC_API_BASE_URL || 'http://127.0.0.1:8000').replace(/\/$/, '');
+  return `${base}/media/celebrities/${encodeURIComponent(identifier)}.jpg`;
 }

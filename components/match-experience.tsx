@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, ImagePlus, RotateCcw, Share2, X } from 'lucide-react';
-import { findMatches, type MatchResponse } from '@/lib/match-api';
+import { findMatches, celebrityImageUrl, type MatchResponse } from '@/lib/match-api';
 
 const loadingMessages = ['Looking for your famous twin...', 'Analyzing facial features...', 'Finding your closest matches...'];
 
@@ -87,10 +87,10 @@ export default function MatchExperience() {
   const top = result?.matches[0];
   return <div className="page-shell match-page">
     <header className="nav"><Link href="/" className="logo" aria-label="Celebry home">celebry<span>✳</span></Link><Link href="/" className="nav-cta"><ArrowLeft size={16}/> Back to home</Link></header>
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <section className={`find-section match-section${result ? ' has-results' : ''}`} id="find">
         <div className="section-intro"><div className="eyebrow"><span className="dot"/> {result ? 'YOUR STAR MOMENT' : 'THE FUN STARTS HERE'}</div><h1>{result ? <>A familiar<br/><em>kind of famous.</em></> : <>Find your<br/><em>famous twin.</em></>}</h1><p>{result ? 'Your closest faces from our small Hollywood collection. A little resemblance, a little curiosity, all for fun.' : 'Choose a clear photo with just you in the frame. We’ll compare your facial features with our Hollywood collection.'}</p><div className="hand-note">Your moment<br/>in the spotlight <span>↗</span></div></div>
-        <div className="upload-card" aria-busy={busy}>
+        <div className="upload-card">
           <div className="card-top"><span>{result ? 'YOUR RESULTS' : 'YOUR PHOTO'}</span><span>{result ? '02 / 02' : '01 / 02'}</span></div>
           {!result ? <>
             <div className={'dropzone ' + (dragging ? 'dragging' : '')} onDragOver={event => { event.preventDefault(); if (!busy) setDragging(true); }} onDragLeave={() => setDragging(false)} onDrop={event => { event.preventDefault(); setDragging(false); if (event.dataTransfer.files.length !== 1) setError('Please choose one photo at a time.'); else choose(event.dataTransfer.files[0]); }}>
@@ -101,15 +101,15 @@ export default function MatchExperience() {
             <label className="consent"><input type="checkbox" checked={consent} disabled={busy} onChange={event => setConsent(event.target.checked)}/><span>I consent to sending this photo for facial analysis and look-alike matching. <Link href="/#privacy">About my photo</Link></span></label>
             {error && <p className="error" role="alert">{error}</p>}
             <button className="button button-purple full" disabled={busy} onClick={analyze}>{busy ? loadingMessages[loadingStep] : 'Find my celebrity twin'}{busy ? <span className="loading-dots" aria-hidden="true">···</span> : <ArrowRight size={18}/>}</button>
-            {busy && <div className="analysis-status"><p role="status">{loadingMessages[loadingStep]}</p><button className="text-button" onClick={cancel}>Cancel request</button></div>}
+            {busy && <div className="analysis-status"><p role="status" aria-atomic="true">{loadingMessages[loadingStep]}</p><button className="text-button" onClick={cancel}>Cancel request</button></div>}
             <p className="demo-note">Your photo is processed by our backend and discarded after analysis.</p>
           </> : top && <div className="result live-result">
             <div className="result-heading"><div><span className="sample">YOUR CLOSEST MATCH</span><h2 ref={resultHeading} tabIndex={-1}>Your star moment.</h2></div><button className="remove-inline" onClick={reset} aria-label="Start over"><X size={18}/></button></div>
-            <div className="comparison"><div><img src={preview} alt="Your uploaded selfie"/><span>YOU</span></div><b aria-hidden="true">✳</b><div><img src={top.celebrity.imageUrl} alt={top.celebrity.name}/><span>CLOSEST IN THIS COLLECTION</span></div></div>
+            <div className="comparison"><div><img src={preview} alt="Your uploaded selfie"/><span>YOU</span></div><b aria-hidden="true">✳</b><div><img width={360} height={420} src={celebrityImageUrl(top.celebrity.id)} alt={top.celebrity.name}/><span>CLOSEST OF {result.catalogSize} FACES</span></div></div>
             <div className="result-name"><strong>{top.celebrity.name} <i aria-hidden="true">✦</i></strong><small>Cosine similarity <b>{top.cosineSimilarity.toFixed(3)}</b></small></div>
-            <p className="score-explanation">Cosine scores range from −1 to 1; higher means closer facial embeddings. These are relative matches in a small collection, not percentages or identity probabilities.</p>
+            <p className="score-explanation">Cosine scores range from −1 to 1; higher means closer facial embeddings. These are relative matches in this collection of {result.catalogSize} celebrities, not percentages or identity probabilities.</p>
             <h3 className="ranking-title">Your Hollywood top five</h3>
-            <ol className="match-ranking">{result.matches.map(match => <li key={match.celebrity.id}><span className="rank-number">{String(match.rank).padStart(2, '0')}</span><img src={match.celebrity.imageUrl} alt="" loading="lazy" width={44} height={52}/><span className="rank-name">{match.celebrity.name}</span><span className="rank-score" aria-label={`Cosine similarity ${match.cosineSimilarity.toFixed(3)}`}>{match.cosineSimilarity.toFixed(3)}</span></li>)}</ol>
+            <ol className="match-ranking">{result.matches.map(match => <li key={match.celebrity.id}><span className="rank-number">{String(match.rank).padStart(2, '0')}</span><img src={celebrityImageUrl(match.celebrity.id)} alt="" loading="lazy" width={44} height={52}/><span className="rank-name">{match.celebrity.name}</span><span className="rank-score" aria-label={`Cosine similarity ${match.cosineSimilarity.toFixed(3)}`}>{match.cosineSimilarity.toFixed(3)}</span></li>)}</ol>
             <div className="result-actions"><button className="button button-dark full" onClick={reset}>Try another photo <RotateCcw size={16}/></button><button className="button button-purple full" onClick={share}>Share my results <Share2 size={16}/></button></div>
             <p className="demo-note">{result.notice}</p>
             <details className="photo-credits"><summary>Celebrity photo credits</summary>{result.matches.map(({ celebrity }) => <p key={celebrity.id}><a href={celebrity.sourceUrl} target="_blank" rel="noreferrer">{celebrity.name}</a>: {celebrity.attribution}. {celebrity.licenseUrl ? <a href={celebrity.licenseUrl} target="_blank" rel="noreferrer">{celebrity.license}</a> : celebrity.license}.</p>)}</details>

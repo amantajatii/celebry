@@ -4,7 +4,7 @@ import { findMatches, parseMatches } from '../lib/match-api.ts';
 
 // Deterministic contract fixtures; never used by the production UI.
 function result() {
-  return {metric: 'cosine_similarity', notice: 'Entertainment only.', matches: Array.from({length: 5}, (_, i) => ({
+  return {catalogSize: 6, metric: 'cosine_similarity', notice: 'Entertainment only.', matches: Array.from({length: 5}, (_, i) => ({
     rank: i + 1, cosineSimilarity: 1 - i * .3, celebrity: {id: String(i), name: `Fixture ${i}`, imageUrl: 'https://example.org/image.jpg', sourceUrl: 'https://example.org/source', license: 'Test fixture', licenseUrl: null, attribution: 'Test fixture'},
   }))};
 }
@@ -17,6 +17,7 @@ test('accepts five descending raw cosine scores, including negative scores', () 
 
 test('rejects incomplete, duplicate, invalid, and unsafe API data', () => {
   const mutations = [
+    data => { data.catalogSize = 4; },
     data => data.matches.pop(),
     data => { data.metric = 'probability'; },
     data => { data.matches[1].celebrity.id = '0'; },
