@@ -7,15 +7,19 @@ import tempfile
 from pathlib import Path
 
 import numpy as np
+from PIL import Image, ImageOps
+from io import BytesIO
+
+from app.contracts import APIError
 
 from app.contracts import Celebrity
 from app.inference import encoder_from_env
-from app.main import validate_image
+from app.main import validate_image, FORMATS
 
 
 def build_catalog(manifest_path: Path, output: Path, encoder):
     records = json.loads(manifest_path.read_text())
-    people, vectors = [], []
+    people, vectors, photos = [], [], {}
     for entry in records:
         record = dict(entry)
         relative = record.pop('image')
@@ -27,8 +31,19 @@ def build_catalog(manifest_path: Path, output: Path, encoder):
         data = image.read_bytes()
         if hashlib.sha256(data).hexdigest() != expected_hash:
             raise ValueError(f'Reference checksum mismatch: {person.id}')
-        validate_image(data, 'image/jpeg')
-        vectors.append(encoder.encode(data))
+        with Image.open(BytesIO(data)) as reference:
+            mime = FORMATS.get(reference.format)
+        validate_image(data, mime)
+        try:
+            vectors.append(encoder.encode(data))
+        except APIError as error:
+            raise ValueError(f'Reference {person.id} failed: {error.code}') from None
+        with Image.open(BytesIO(data)) as reference:
+            display = ImageOps.exif_transpose(reference).convert('RGB')
+            display.thumbnail((500, 700))
+            buffer = BytesIO()
+            display.save(buffer, format='JPEG', quality=85, optimize=True)
+        photos[f'photo_{len(people)}'] = np.frombuffer(buffer.getvalue(), dtype=np.uint8)
         people.append(person.model_dump(mode='json'))
     if len(people) < 5 or len({p['id'] for p in people}) != len(people):
         raise ValueError('At least five unique celebrities are required')
@@ -37,7 +52,7 @@ def build_catalog(manifest_path: Path, output: Path, encoder):
     fd, temporary = tempfile.mkstemp(dir=output.parent, suffix='.npz')
     try:
         with os.fdopen(fd, 'wb') as target:
-            np.savez_compressed(target, embeddings=np.stack(vectors), metadata=json.dumps(people), fingerprint=encoder.fingerprint)
+            np.savez_compressed(target, embeddings=np.stack(vectors), metadata=json.dumps(people), fingerprint=encoder.fingerprint, **photos)
         os.replace(temporary, output)
     finally:
         if os.path.exists(temporary):

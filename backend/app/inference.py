@@ -39,8 +39,15 @@ class FaceEncoder:
                     digest.update(chunk)
         self.fingerprint = digest.hexdigest()
         from insightface.model_zoo import get_model
-        self.detector = get_model(str(detection_path), providers=['CPUExecutionProvider'])
-        self.recognizer = get_model(str(recognition_path), providers=['CPUExecutionProvider'])
+        import onnxruntime as ort
+        ort.disable_telemetry_events()
+        options = ort.SessionOptions()
+        options.intra_op_num_threads = int(os.getenv('CELEBRY_INFERENCE_THREADS', '2'))
+        if options.intra_op_num_threads < 1:
+            raise ValueError('Inference threads must be positive')
+        options.inter_op_num_threads = 1
+        self.detector = get_model(str(detection_path), providers=['CPUExecutionProvider'], sess_options=options)
+        self.recognizer = get_model(str(recognition_path), providers=['CPUExecutionProvider'], sess_options=options)
         if getattr(self.detector, 'taskname', None) != 'detection' or getattr(self.recognizer, 'taskname', None) != 'recognition':
             raise ValueError('Expected detection and ArcFace recognition models')
         self.detector.prepare(ctx_id=-1, input_size=(640, 640), det_thresh=0.5)
@@ -81,6 +88,12 @@ class Matcher:
                 raise ValueError('Model or preprocessing mismatch; rebuild celebrity embeddings')
             self.celebrities = [Celebrity.model_validate(item) for item in json.loads(str(catalog['metadata'].item()))]
             matrix = np.asarray(catalog['embeddings'], dtype=np.float32)
+            self.photos = {}
+            for index, person in enumerate(self.celebrities):
+                photo = catalog[f'photo_{index}']
+                if photo.dtype != np.uint8 or photo.ndim != 1 or not 0 < len(photo) <= 1024 * 1024:
+                    raise ValueError('Invalid public display photo; rebuild the catalog')
+                self.photos[person.id] = photo.tobytes()
         if len(self.celebrities) < 5 or len({c.id for c in self.celebrities}) != len(self.celebrities):
             raise ValueError('At least five unique celebrities are required')
         if matrix.shape != (len(self.celebrities), DIMENSIONS):
@@ -94,7 +107,7 @@ class Matcher:
             query = unit_vector(self.encoder.encode(data))
             scores = np.clip(self.embeddings @ query, -1, 1)
             order = np.argsort(-scores, kind='stable')[:5]
-            return MatchResponse(matches=[Match(rank=rank, celebrity=self.celebrities[int(i)],
+            return MatchResponse(catalogSize=len(self.celebrities), matches=[Match(rank=rank, celebrity=self.celebrities[int(i)],
                                                cosineSimilarity=float(scores[i]))
                                           for rank, i in enumerate(order, 1)])
         finally:

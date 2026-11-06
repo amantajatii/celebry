@@ -1,0 +1,177 @@
+[
+  {
+    "id": "zendaya",
+    "name": "Zendaya",
+    "file": "Zendaya 2019 by Glenn Francis.jpg"
+  },
+  {
+    "id": "timothee-chalamet",
+    "name": "Timothée Chalamet",
+    "file": "Timothée Chalamet-63482 (cropped).jpg"
+  },
+  {
+    "id": "florence-pugh",
+    "name": "Florence Pugh",
+    "file": "Florence Pugh - The Wonder BFI London Film Festival Premiere, October 2022 (cropped).jpg"
+  },
+  {
+    "id": "emma-stone",
+    "name": "Emma Stone",
+    "file": "Emma Stone at the 39th Mill Valley Film Festival (cropped).jpg"
+  },
+  {
+    "id": "ryan-gosling",
+    "name": "Ryan Gosling",
+    "file": "Ryan Gosling in 2018.jpg"
+  },
+  {
+    "id": "ana-de-armas",
+    "name": "Ana de Armas",
+    "file": "Ana_de_Armas_(54462619561)_(cropped_3).jpg"
+  },
+  {
+    "id": "andrew-garfield",
+    "name": "Andrew Garfield",
+    "file": "Andrew_Garfield_at_the_2026_New_York_Film_Festival-18.jpg"
+  },
+  {
+    "id": "anne-hathaway",
+    "name": "Anne Hathaway",
+    "file": "AnneHathaway-byPhilipRomano-Crop.jpg"
+  },
+  {
+    "id": "brad-pitt",
+    "name": "Brad Pitt",
+    "file": "Brad_Pitt-69858.jpg"
+  },
+  {
+    "id": "chris-evans",
+    "name": "Chris Evans",
+    "file": "Chris_Evans_at_the_2025_Toronto_International_Film_Festival_(cropped).jpg"
+  },
+  {
+    "id": "chris-hemsworth",
+    "name": "Chris Hemsworth",
+    "file": "Chris_Hemsworth_-_Crime_101.jpg"
+  },
+  {
+    "id": "daniel-radcliffe",
+    "name": "Daniel Radcliffe",
+    "file": "DanielRadcliffe.jpg"
+  },
+  {
+    "id": "elizabeth-olsen",
+    "name": "Elizabeth Olsen",
+    "file": "ElizabethOlsen-TIFF2025-02_(cropped).png"
+  },
+  {
+    "id": "emma-watson",
+    "name": "Emma Watson",
+    "file": "Emma_Watson_2013.jpg"
+  },
+  {
+    "id": "gal-gadot",
+    "name": "Gal Gadot",
+    "file": "Gal_Gadot_by_Gage_Skidmore_3.jpg"
+  },
+  {
+    "id": "hailee-steinfeld",
+    "name": "Hailee Steinfeld",
+    "file": "Hailee_Steinfeld_by_Gage_Skidmore.jpg"
+  },
+  {
+    "id": "henry-cavill",
+    "name": "Henry Cavill",
+    "file": "Henry_Cavill_(48417913146)_(cropped).jpg"
+  },
+  {
+    "id": "jenna-ortega",
+    "name": "Jenna Ortega",
+    "file": "Jenna_Ortega-63799_(cropped).jpg"
+  },
+  {
+    "id": "jennifer-lawrence",
+    "name": "Jennifer Lawrence",
+    "file": "Jennifer_Lawrence,_Cannes_Film_Festival_2025.jpg"
+  },
+  {
+    "id": "keanu-reeves",
+    "name": "Keanu Reeves",
+    "file": "Keanu_Reeves_at_TIFF_2025_02_(Cropped).jpg"
+  },
+  {
+    "id": "leonardo-dicaprio",
+    "name": "Leonardo DiCaprio",
+    "file": "LeoPTABFI191125-28_(cropped).jpg"
+  },
+  {
+    "id": "lupita-nyongo",
+    "name": "Lupita Nyong'o",
+    "file": "LupitaNyongo-byPhilipRomano3.jpg"
+  },
+  {
+    "id": "margot-robbie",
+    "name": "Margot Robbie",
+    "file": "Margot_Robbie_Wuthering_Heights_premiere_(cropped).jpg"
+  },
+  {
+    "id": "michael-b-jordan",
+    "name": "Michael B. Jordan",
+    "file": "Michael_B_Jordan_-_Sinners_(cropped).jpg"
+  },
+  {
+    "id": "natalie-portman",
+    "name": "Natalie Portman",
+    "file": "NataliePortman.jpg"
+  },
+  {
+    "id": "oscar-isaac",
+    "name": "Oscar Isaac",
+    "file": "Oscar_Isaac_at_82nd_Venice_International_Film_Festival-1_(cropped).jpg"
+  },
+  {
+    "id": "pedro-pascal",
+    "name": "Pedro Pascal",
+    "file": "Pedro_Pascal_at_the_2026_New_York_Film_Festival-042.jpg"
+  },
+  {
+    "id": "robert-downey-jr",
+    "name": "Robert Downey Jr.",
+    "file": "RobertDowneyJr-byPhilipRomano7_(cropped).jpg"
+  },
+  {
+    "id": "robert-pattinson",
+    "name": "Robert Pattinson",
+    "file": "Robert_Pattinson_Venice_Film_Festival_(cropped).jpg"
+  },
+  {
+    "id": "ryan-reynolds",
+    "name": "Ryan Reynolds",
+    "file": "Deadpool_2_Japan_Premiere_Red_Carpet_Ryan_Reynolds_(cropped).jpg"
+  },
+  {
+    "id": "saoirse-ronan",
+    "name": "Saoirse Ronan",
+    "file": "MKr349648_Saoirse_Ronan_(The_Outrun,_Berlinale_2024).jpg"
+  },
+  {
+    "id": "scarlett-johansson",
+    "name": "Scarlett Johansson",
+    "file": "Scarlett_Johansson-8588.jpg"
+  },
+  {
+    "id": "sydney-sweeney",
+    "name": "Sydney Sweeney",
+    "file": "Sydney_Sweeney_at_the_2024_Toronto_International_Film_Festival_01_(3x4_cropped_and_rotated).jpg"
+  },
+  {
+    "id": "tom-holland",
+    "name": "Tom Holland",
+    "file": "TomHolland-byPhilipRomano.jpg"
+  },
+  {
+    "id": "zoe-saldaña",
+    "name": "Zoe Saldaña",
+    "file": "Zoe_Saldaña_at_the_2024_Toronto_International_Film_Festival_(cropped).jpg"
+  }
+]

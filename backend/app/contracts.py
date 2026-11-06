@@ -24,6 +24,7 @@ class Match(BaseModel):
 
 
 class MatchResponse(BaseModel):
+    catalogSize: int = Field(ge=5)
     matches: list[Match]
     metric: str = 'cosine_similarity'
     notice: str = 'Entertainment only. Similarity is not an identity probability.'

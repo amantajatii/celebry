@@ -108,3 +108,85 @@ def test_cors_and_error_contract(client):
     response = client.get('/not-found')
     assert response.status_code == 404
     assert set(response.json()['error']) == {'code', 'message'}
+
+
+def test_readiness_reports_missing_models(client):
+    response = client.get('/api/ready')
+    assert response.status_code == 503
+    assert response.json()['error']['code'] == 'MATCHING_NOT_READY'
+    assert response.headers['cache-control'] == 'no-store'
+
+
+def test_declared_body_limit_and_invalid_length(client):
+    for value, status in [('999999999', 413), ('-1', 400), ('invalid', 400)]:
+        response = client.post('/api/match', content=b'x', headers={'Content-Type': 'multipart/form-data; boundary=x', 'Content-Length': value})
+        assert response.status_code == status
+
+
+def test_production_startup_requires_ready_inference(monkeypatch):
+    monkeypatch.setenv('CELEBRY_REQUIRE_READY', 'true')
+    monkeypatch.delenv('CELEBRY_CATALOG', raising=False)
+    with pytest.raises(RuntimeError, match='must be ready'):
+        with TestClient(create_app()):
+            pass
+
+
+def test_upload_timeout_and_processing_admission(monkeypatch):
+    import asyncio
+    import httpx
+
+    async def scenario():
+        monkeypatch.setenv('CELEBRY_UPLOAD_TIMEOUT_SECONDS', '0.05')
+        monkeypatch.setenv('CELEBRY_MAX_PROCESSING', '1')
+        app = create_app()
+        entered = asyncio.Event()
+        release = asyncio.Event()
+
+        async def slow_body():
+            yield b'partial'
+            entered.set()
+            await release.wait()
+            yield b'end'
+
+        async with httpx.AsyncClient(transport=httpx.ASGITransport(app), base_url='http://test') as session:
+            first = asyncio.create_task(session.post('/api/match', content=slow_body(), headers={'Content-Type': 'multipart/form-data; boundary=x'}))
+            await entered.wait()
+            second = await session.post('/api/match', json={})
+            assert second.status_code == 503
+            assert second.json()['error']['code'] == 'MATCHING_BUSY'
+            response = await first
+            assert response.status_code == 408
+            assert response.json()['error']['code'] == 'UPLOAD_TIMEOUT'
+            # The slot must be released after a timed-out upload.
+            assert (await session.post('/api/match', json={})).status_code == 415
+    asyncio.run(scenario())
+
+
+def test_disk_spooled_upload_is_closed_after_validation_failure(client, monkeypatch):
+    closed=[]
+    original=UploadFile.close
+    async def record_close(self):
+        rolled=self.file._rolled
+        await original(self)
+        closed.append((rolled,self.file.closed))
+    monkeypatch.setattr(UploadFile,'close',record_close)
+    response=upload(client,b'x'*(2*1024*1024))
+    assert response.status_code==422
+    assert closed==[(True,True)]
+
+
+def test_truncated_multipart_closes_unfinished_disk_spool(client, monkeypatch):
+    import starlette.formparsers as parsers
+    created=[]
+    original=parsers.SpooledTemporaryFile
+    def track(*args,**kwargs):
+        spool=original(*args,**kwargs)
+        created.append(spool)
+        return spool
+    monkeypatch.setattr(parsers,'SpooledTemporaryFile',track)
+    body=(b'--x\r\nContent-Disposition: form-data; name="consent"\r\n\r\ntrue\r\n'
+          b'--x\r\nContent-Disposition: form-data; name="photo"; filename="fixture.png"\r\n'
+          b'Content-Type: image/png\r\n\r\n'+b'x'*(2*1024*1024))
+    response=client.post('/api/match',content=body,headers={'Content-Type':'multipart/form-data; boundary=x'})
+    assert response.status_code in (400,422)
+    assert created and all(spool.closed for spool in created)

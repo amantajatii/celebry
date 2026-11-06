@@ -21,7 +21,8 @@ def catalog(path, fingerprint='test-model', matrix=None):
     if matrix is None:
         matrix = np.zeros((6, 512), dtype=np.float32)
         matrix[:, :2] = [[1, 0], [0.8, 0.6], [0.6, 0.8], [0, 1], [-0.6, 0.8], [-1, 0]]
-    np.savez(path, embeddings=matrix, metadata=json.dumps(people), fingerprint=fingerprint)
+    np.savez(path, embeddings=matrix, metadata=json.dumps(people), fingerprint=fingerprint,
+             **{f'photo_{i}':np.frombuffer(b'fixture',dtype=np.uint8) for i in range(len(people))})
     return path
 
 
@@ -88,6 +89,11 @@ def test_ready_api_uses_matcher(matcher):
     with TestClient(create_app(matcher=matcher)) as client:
         assert client.get('/api/health').json()['matchingReady'] is True
         assert client.get('/api/celebrities').json()['total'] == 6
+        image = client.get('/media/celebrities/0.jpg')
+        assert image.status_code == 200
+        assert image.headers['content-type'] == 'image/jpeg'
+        assert image.headers['cache-control'] == 'public, max-age=86400'
+        assert client.get('/media/celebrities/missing.jpg').status_code == 404
         photo = BytesIO()
         Image.new('RGB', (64, 64)).save(photo, format='PNG')
         response = client.post('/api/match', files={'photo': ('fixture.png', photo.getvalue(), 'image/png')}, data={'consent': 'true'})
@@ -121,3 +127,20 @@ def test_real_inference_api():
             collage.save(photo, format='JPEG')
         response = client.post('/api/match', files={'photo': ('two.jpg', photo.getvalue(), 'image/jpeg')}, data={'consent': 'true'})
         assert response.json()['error']['code'] == 'MULTIPLE_FACES'
+
+
+@pytest.mark.skipif(not os.getenv('CELEBRY_REAL_INFERENCE_TEST'), reason='Requires local model/catalog and public reference files')
+def test_every_real_catalog_reference_self_matches():
+    from app.inference import load_matcher
+    matcher = load_matcher()
+    records = json.loads(Path('data/hollywood/celebrities.json').read_text())
+    assert len(matcher.celebrities) == len(records)
+    for reference in records:
+        result = matcher.match((Path('data/hollywood') / reference['image']).read_bytes())
+        assert result.catalogSize == len(records)
+        assert result.matches[0].celebrity.id == reference['id']
+        assert result.matches[0].cosineSimilarity > .99
+        with Image.open(BytesIO(matcher.photos[reference['id']])) as display:
+            assert display.format == 'JPEG'
+            assert display.width <= 500 and display.height <= 700
+            display.load()
