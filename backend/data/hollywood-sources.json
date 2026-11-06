@@ -2,386 +2,1121 @@
   {
     "id": "zendaya",
     "name": "Zendaya",
+    "collection": "actresses",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Zendaya_2019_by_Glenn_Francis.jpg/1280px-Zendaya_2019_by_Glenn_Francis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zendaya_2019_by_Glenn_Francis.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Toglenn; Wikimedia Commons; resized reference image",
     "image": "zendaya.jpg",
-    "sha256": "158434e27c884fbeb57017a717b3c3b6e26079e3d50b058caad2d3400e39beb5"
+    "sha256": "158434e27c884fbeb57017a717b3c3b6e26079e3d50b058caad2d3400e39beb5",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Zendaya-byPhilipRomano.jpg/960px-Zendaya-byPhilipRomano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zendaya-byPhilipRomano.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "attribution": "PhilipRomano; Wikimedia Commons; resized reference image",
+        "image": "zendaya-reference-2.jpg",
+        "sha256": "f4d736bf9123999d4f45b38dab83e6d1992801e0dfa41d33622b81187beb22e8"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Zendaya_by_Gage_Skidmore.jpg/960px-Zendaya_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zendaya_by_Gage_Skidmore.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
+        "image": "zendaya-reference-3.jpg",
+        "sha256": "f0dec28043abc814fb10d66e2af5d53098e41cf454ae9959fff6cb14e7778176"
+      }
+    ]
   },
   {
     "id": "timothee-chalamet",
     "name": "Timothée Chalamet",
+    "collection": "actors",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Timoth%C3%A9e_Chalamet-63482_%28cropped%29.jpg/1280px-Timoth%C3%A9e_Chalamet-63482_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Timoth%C3%A9e_Chalamet-63482_(cropped).jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Harald Krichel; Wikimedia Commons; resized reference image",
     "image": "timothee-chalamet.jpg",
-    "sha256": "74992acbd4737826663f4f196881d1c2ca6da33393098de4da9bcceea94a796c"
+    "sha256": "74992acbd4737826663f4f196881d1c2ca6da33393098de4da9bcceea94a796c",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Timoth%C3%A9e_Chalamet_Call_Me_By_Your_Name_Press_Conference_Berlinale_2017_%28cropped%29.jpg/960px-Timoth%C3%A9e_Chalamet_Call_Me_By_Your_Name_Press_Conference_Berlinale_2017_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Timoth%C3%A9e_Chalamet_Call_Me_By_Your_Name_Press_Conference_Berlinale_2017_(cropped).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "attribution": "Maximilian Bühn; Wikimedia Commons; resized reference image",
+        "image": "timothee-chalamet-reference-2.jpg",
+        "sha256": "c3896ec1bebda529a5effd8404f6c603d20a95e6f6262f772b9f1867ae5e3598"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Timoth%C3%A9e_Chalamet_in_2018_%28cropped%29.jpg/960px-Timoth%C3%A9e_Chalamet_in_2018_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Timoth%C3%A9e_Chalamet_in_2018_(cropped).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Somewhere In Toronto; Wikimedia Commons; resized reference image",
+        "image": "timothee-chalamet-reference-3.jpg",
+        "sha256": "356840fa53422858995ffd8fc08f172d7cdbe97043266e161a14840ba39d97ea"
+      }
+    ]
   },
   {
     "id": "florence-pugh",
     "name": "Florence Pugh",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/Florence_Pugh_-_The_Wonder_BFI_London_Film_Festival_Premiere%2C_October_2022_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "collection": "actresses",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Florence_Pugh_-_The_Wonder_BFI_London_Film_Festival_Premiere%2C_October_2022_%28cropped%29.jpg/330px-Florence_Pugh_-_The_Wonder_BFI_London_Film_Festival_Premiere%2C_October_2022_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Florence_Pugh_-_The_Wonder_BFI_London_Film_Festival_Premiere,_October_2022_(cropped).jpg",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "attribution": "Raph_PH; Wikimedia Commons; resized reference image",
     "image": "florence-pugh.jpg",
-    "sha256": "ba8af9dcb9aeb029865236aa25d5227d64518cc5d6a297da26302a1e04698935"
+    "sha256": "d82cbf40f5d39a8a1292090535d1e3d85b65de5179c79cf9180a753b17217458",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Florence_Pugh_%2848471906272%29_%28cropped%29.jpg/960px-Florence_Pugh_%2848471906272%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Florence_Pugh_(48471906272)_(cropped).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Gage Skidmore from Peoria, AZ, United States of America; Wikimedia Commons; resized reference image",
+        "image": "florence-pugh-reference-2.jpg",
+        "sha256": "b92ff28ab7cd108c40b48a87e69efc7cda84494389259de55759e6a5887ec412"
+      },
+      {
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Florence_Pugh_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Florence_Pugh_2026.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "attribution": "Marlene Landu; Wikimedia Commons; resized reference image",
+        "image": "florence-pugh-reference-3.jpg",
+        "sha256": "8be5b9bd488331da05a78023fbd92eab00e6f51e5e495817c46af8780d511832"
+      }
+    ]
   },
   {
     "id": "emma-stone",
     "name": "Emma Stone",
+    "collection": "actresses",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Emma_Stone_at_the_39th_Mill_Valley_Film_Festival_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emma_Stone_at_the_39th_Mill_Valley_Film_Festival_(cropped).jpg",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "attribution": "https://www.flickr.com/photos/marinsd; Wikimedia Commons; resized reference image",
     "image": "emma-stone.jpg",
-    "sha256": "97f98a6c68fa9ab39da683431eddac22fc79da5afdd3e695b7d88a856644a5a8"
+    "sha256": "97f98a6c68fa9ab39da683431eddac22fc79da5afdd3e695b7d88a856644a5a8",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Emma_Stone_at_the_2024_New_York_Film_Festival_1_%28cropped%29.jpg/960px-Emma_Stone_at_the_2024_New_York_Film_Festival_1_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emma_Stone_at_the_2024_New_York_Film_Festival_1_(cropped).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "attribution": "Bryan Berlin; Wikimedia Commons; resized reference image",
+        "image": "emma-stone-reference-2.jpg",
+        "sha256": "2c5239849209769194babebe77c0d0aca9bbe4dae30c884839323efb00b60005"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Emma_Stone_at_the_2025_Venice_Film_Festival-6313_%28cropped%29.jpg/960px-Emma_Stone_at_the_2025_Venice_Film_Festival-6313_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emma_Stone_at_the_2025_Venice_Film_Festival-6313_(cropped).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "attribution": "Harald Krichel; Wikimedia Commons; resized reference image",
+        "image": "emma-stone-reference-3.jpg",
+        "sha256": "39d80dba84969f42c5a8c533b1911e1c8a558bb6d77c920f5cedcaef573b9a0d"
+      }
+    ]
   },
   {
     "id": "ryan-gosling",
     "name": "Ryan Gosling",
-    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Ryan_Gosling_in_2018.jpg/1280px-Ryan_Gosling_in_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "collection": "actors",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Ryan_Gosling_in_2018.jpg/330px-Ryan_Gosling_in_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ryan_Gosling_in_2018.jpg",
     "license": "Public domain",
     "licenseUrl": null,
     "attribution": "Aubrey Gemignani; Wikimedia Commons; resized reference image",
     "image": "ryan-gosling.jpg",
-    "sha256": "e71750a90eced8d414d024ce2c2bda8d4f01536bb020edd54a5273df4f1ab433"
+    "sha256": "ba36916fdbec270fc5a3071293f2a9232dccdf0a2ca057b2d3b622c592bf5e9e",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Ryan_Gosling_2_Cannes_2011_%28cropped%29.jpg/960px-Ryan_Gosling_2_Cannes_2011_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ryan_Gosling_2_Cannes_2011_(cropped).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "attribution": "Raffi Asdourian; Wikimedia Commons; resized reference image",
+        "image": "ryan-gosling-reference-2.jpg",
+        "sha256": "a04c22854d837916c7baf680fdebe5f29ce7c0c1eadaf10146e9414dee586119"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Ryan_Gosling_%2836201256705%29_%28cropped%29.jpg/960px-Ryan_Gosling_%2836201256705%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ryan_Gosling_(36201256705)_(cropped).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Gage Skidmore from Peoria, AZ, United States of America; Wikimedia Commons; resized reference image",
+        "image": "ryan-gosling-reference-3.jpg",
+        "sha256": "48aeab943b8bfd0e7fb26c8e00174ea64fcb24379afb99665ffdbe005f0e867b"
+      }
+    ]
   },
   {
     "id": "ana-de-armas",
     "name": "Ana de Armas",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Ana_de_Armas_%2854462619561%29_%28cropped_3%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "collection": "actresses",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Ana_de_Armas_%2854462619561%29_%28cropped_3%29.jpg/330px-Ana_de_Armas_%2854462619561%29_%28cropped_3%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ana_de_Armas_(54462619561)_(cropped_3).jpg",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "attribution": "Gage Skidmore from Surprise, AZ, United States of America; Wikimedia Commons; resized reference image",
     "image": "ana-de-armas.jpg",
-    "sha256": "a19e6c90b238d8c920789068c7a9690ca5233553c6ec1f6b2c32e8a29b22e202"
+    "sha256": "9cbeecd4ef692dd99ea8b05283fa7a891a463904944aa40a25587d957e4fbd66",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Ana_de_Armas_by_Gage_Skidmore.jpg/960px-Ana_de_Armas_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ana_de_Armas_by_Gage_Skidmore.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
+        "image": "ana-de-armas-reference-2.jpg",
+        "sha256": "b8dcf38e287ccf2a43300c67f8b7477a2aa9d75c5f9cd1c2c614855c5d6bf26d"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Ana_de_Armas_at_the_2024_Toronto_International_Film_Festival_05_%28cropped%29.jpg/960px-Ana_de_Armas_at_the_2024_Toronto_International_Film_Festival_05_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ana_de_Armas_at_the_2024_Toronto_International_Film_Festival_05_(cropped).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "attribution": "Jay Dixit; Wikimedia Commons; resized reference image",
+        "image": "ana-de-armas-reference-3.jpg",
+        "sha256": "efaee940d038b0463b10f9c82be744c7c48ecd326cc42a87a4e1fd1e1b414409"
+      }
+    ]
   },
   {
     "id": "andrew-garfield",
     "name": "Andrew Garfield",
-    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Andrew_Garfield_at_the_2026_New_York_Film_Festival-18.jpg/1280px-Andrew_Garfield_at_the_2026_New_York_Film_Festival-18.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "collection": "actors",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Andrew_Garfield_at_the_2026_New_York_Film_Festival-18.jpg/330px-Andrew_Garfield_at_the_2026_New_York_Film_Festival-18.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andrew_Garfield_at_the_2026_New_York_Film_Festival-18.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Bryan Berlin; Wikimedia Commons; resized reference image",
     "image": "andrew-garfield.jpg",
-    "sha256": "4cd8d4600145514cc100df06ef3a94f703d92b65af07bf91bfa519478a15cdf3"
+    "sha256": "284649faa8369caf5a178704b4b8328273bc09cad71851f3d461cf0025c78cf0",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Andrew_Garfield_in_2023_%28cropped%29.jpg/960px-Andrew_Garfield_in_2023_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andrew_Garfield_in_2023_(cropped).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "https://www.flickr.com/photos/drlovell/; Wikimedia Commons; resized reference image",
+        "image": "andrew-garfield-reference-2.jpg",
+        "sha256": "1ef757a34bb7f4f18a7c29955aa5fbdcac2524c501d571a48657e67f94df13c0"
+      },
+      {
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Andrew_Garfield_Comic-Con_2011_%28Straighten_Crop%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andrew_Garfield_Comic-Con_2011_(Straighten_Crop).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Gerald Geronimo; Wikimedia Commons; resized reference image",
+        "image": "andrew-garfield-reference-3.jpg",
+        "sha256": "272bfd567adfdb72b23fd1deb226680eed2fa2ae92b2dcea30f1a304feaa0128"
+      }
+    ]
   },
   {
     "id": "anne-hathaway",
     "name": "Anne Hathaway",
-    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/AnneHathaway-byPhilipRomano-Crop.jpg/1280px-AnneHathaway-byPhilipRomano-Crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "collection": "actresses",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/AnneHathaway-byPhilipRomano-Crop.jpg/330px-AnneHathaway-byPhilipRomano-Crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:AnneHathaway-byPhilipRomano-Crop.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "PhilipRomano; Wikimedia Commons; resized reference image",
     "image": "anne-hathaway.jpg",
-    "sha256": "eaa885044b5d0df450029983f0fcad5f60c3f8f681fea653c7d93e0b6bdd5f73"
+    "sha256": "950539c0782d343f6fb1745b971f747dc3f3d75bd41d0ba1795d54be7602c7ce",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Anne_Hathaway_2014_%28cropped%29.jpg/960px-Anne_Hathaway_2014_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anne_Hathaway_2014_(cropped).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Mingle MediaTV; Wikimedia Commons; resized reference image",
+        "image": "anne-hathaway-reference-2.jpg",
+        "sha256": "e4b7520fc082ebe978881934118c63361d14db2251e54934c81d72e4ef9e7d03"
+      },
+      {
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Anne_Hathaway_%40_2018.09.15_Human_Rights_Campaign_National_Dinner%2C_Washington%2C_DC_USA_06198_%2844713869971%29_%28cropped_4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anne_Hathaway_@_2018.09.15_Human_Rights_Campaign_National_Dinner,_Washington,_DC_USA_06198_(44713869971)_(cropped_4).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Ted Eytan; Wikimedia Commons; resized reference image",
+        "image": "anne-hathaway-reference-3.jpg",
+        "sha256": "8292245ccb1294b2561fa70f7caaba35f06d2c85d5d8e7760854ba15fa91caa2"
+      }
+    ]
   },
   {
     "id": "brad-pitt",
     "name": "Brad Pitt",
-    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Brad_Pitt-69858.jpg/1280px-Brad_Pitt-69858.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "collection": "actors",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Brad_Pitt-69858.jpg/330px-Brad_Pitt-69858.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brad_Pitt-69858.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Harald Krichel; Wikimedia Commons; resized reference image",
     "image": "brad-pitt.jpg",
-    "sha256": "5181911c290b4c444c491e2d0fdd7c65379cb10973ef40ae6ca80b49dbe82394"
+    "sha256": "5ec2a9bb43aa70327ddcf5131357508acd1d3a03f65fe41a2030295e577f3a5b",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/War_Machine_Japan_Premiere_Red_Carpet-_Brad_Pitt_%2838338138066%29_%28cropped%29.jpg/960px-War_Machine_Japan_Premiere_Red_Carpet-_Brad_Pitt_%2838338138066%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:War_Machine_Japan_Premiere_Red_Carpet-_Brad_Pitt_(38338138066)_(cropped).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "attribution": "Dick Thomas Johnson from Tokyo, Japan; Wikimedia Commons; resized reference image",
+        "image": "brad-pitt-reference-2.jpg",
+        "sha256": "98fbfceaf618820e0f144fdfa4e81b6a8ecdb75f4cb5d5497bebacee1c0f953e"
+      },
+      {
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Brad_Pitt_June_2014_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brad_Pitt_June_2014_(cropped).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "attribution": "Foreign and Commonwealth Office; Wikimedia Commons; resized reference image",
+        "image": "brad-pitt-reference-3.jpg",
+        "sha256": "b033047b1e8664972378dcbb166b6551d99d9e313c3ce525fbfd426077e4d983"
+      }
+    ]
   },
   {
     "id": "chris-evans",
     "name": "Chris Evans",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Chris_Evans_at_the_2025_Toronto_International_Film_Festival_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "collection": "actors",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Chris_Evans_at_the_2025_Toronto_International_Film_Festival_%28cropped%29.jpg/330px-Chris_Evans_at_the_2025_Toronto_International_Film_Festival_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chris_Evans_at_the_2025_Toronto_International_Film_Festival_(cropped).jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Sara Komatsu; Wikimedia Commons; resized reference image",
     "image": "chris-evans.jpg",
-    "sha256": "ac854fd3869d4b7fc5909aa62f443fd9eba4d682e97cc3df1144941615829f59"
+    "sha256": "8535f7cde1e80a17562becd512a841d11015953477a523d2561b3e16d52fcc9b",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Chris_Evans_-_Captain_America_2_press_conference_%28cropped%29.jpg/960px-Chris_Evans_-_Captain_America_2_press_conference_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chris_Evans_-_Captain_America_2_press_conference_(cropped).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "attribution": "Elen Nivrae; Wikimedia Commons; resized reference image",
+        "image": "chris-evans-reference-2.jpg",
+        "sha256": "41d79563f7c914f1835900b02ed7752534fa24ccbc322dc99cb385708f7c73b4"
+      },
+      {
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Chris_Evans_C2E2_2023_1_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chris_Evans_C2E2_2023_1_(cropped).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "attribution": "Chris Roth; Wikimedia Commons; resized reference image",
+        "image": "chris-evans-reference-3.jpg",
+        "sha256": "e4bc912fe47ae51085e52560223647961ba66f964815e13d5954a4ef5f409d18"
+      }
+    ]
   },
   {
     "id": "chris-hemsworth",
     "name": "Chris Hemsworth",
-    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Chris_Hemsworth_-_Crime_101.jpg/1280px-Chris_Hemsworth_-_Crime_101.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "collection": "actors",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Chris_Hemsworth_-_Crime_101.jpg/330px-Chris_Hemsworth_-_Crime_101.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chris_Hemsworth_-_Crime_101.jpg",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "attribution": "Kevin Paul; Wikimedia Commons; resized reference image",
     "image": "chris-hemsworth.jpg",
-    "sha256": "476aac3a725fe40ecbaf60db4b723e9c75a7592139d062a85abfd64e66a1911d"
+    "sha256": "5850f31039a6e37343dfad714abafaf0e9dcae8bcb778b7efb19350095ae1104",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Chris_Hemsworth_by_Gage_Skidmore.jpg/960px-Chris_Hemsworth_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chris_Hemsworth_by_Gage_Skidmore.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
+        "image": "chris-hemsworth-reference-2.jpg",
+        "sha256": "1080f07f8875d4be05a0cf1d37a5b3c5afec18cad5888dd14f2d4a1c46253018"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Chris_Hemsworth_by_Gage_Skidmore_3.jpg/960px-Chris_Hemsworth_by_Gage_Skidmore_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chris_Hemsworth_by_Gage_Skidmore_3.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
+        "image": "chris-hemsworth-reference-3.jpg",
+        "sha256": "467f2a49e216bb3cf741d58f710b12759e43588637f3064fe9637a33fb6119b7"
+      }
+    ]
   },
   {
     "id": "daniel-radcliffe",
     "name": "Daniel Radcliffe",
-    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/DanielRadcliffe.jpg/1280px-DanielRadcliffe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "collection": "actors",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/DanielRadcliffe.jpg/330px-DanielRadcliffe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:DanielRadcliffe.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Philip Romano; Wikimedia Commons; resized reference image",
     "image": "daniel-radcliffe.jpg",
-    "sha256": "bffd16e3f4776bae19dde1b417b381b84c62b1b7202ce694e9172995c46d9f69"
+    "sha256": "395ccf0295731a44299ec132fb0b39c24f565fbe698451b42b6a1448d1dfe645",
+    "references": [
+      {
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Daniel_Radcliffe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daniel_Radcliffe.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "attribution": "Matthew Blaney from London, UK; Wikimedia Commons; resized reference image",
+        "image": "daniel-radcliffe-reference-2.jpg",
+        "sha256": "67d864becf9053fb02253b45ef3196475d537205e0120fc2e2640c122d3eba87"
+      },
+      {
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Daniel_Radcliffe_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daniel_Radcliffe_2013.jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Christopher William Adach from London, UK; Wikimedia Commons; resized reference image",
+        "image": "daniel-radcliffe-reference-3.jpg",
+        "sha256": "728118c4254313cba95b1c218a5c49012c0a56d6c640a4b105ab2046c269f962"
+      }
+    ]
   },
   {
     "id": "elizabeth-olsen",
     "name": "Elizabeth Olsen",
-    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/ElizabethOlsen-TIFF2025-02_%28cropped%29.png/1280px-ElizabethOlsen-TIFF2025-02_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "collection": "actresses",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/ElizabethOlsen-TIFF2025-02_%28cropped%29.png/330px-ElizabethOlsen-TIFF2025-02_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:ElizabethOlsen-TIFF2025-02_(cropped).png",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "attribution": "JoshPopov; Wikimedia Commons; resized reference image",
     "image": "elizabeth-olsen.png",
-    "sha256": "3e968bf609475a70f0262882de49c9056cd8c1d0ca0b162c3baf651598b85879"
+    "sha256": "9be4fcace53ca1e6b6469169f85fcc60105b23b205dc7897fe5c2355a267307f",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Elizabeth_Olsen_TIFF_2011a_%28cropped%29.jpg/960px-Elizabeth_Olsen_TIFF_2011a_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elizabeth_Olsen_TIFF_2011a_(cropped).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Tabercil; Wikimedia Commons; resized reference image",
+        "image": "elizabeth-olsen-reference-2.jpg",
+        "sha256": "2bd6044b0fea9616930a216a9cf1cefbe27587562dc5e088b4d416fca4d42923"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Elizabeth_Olsen_by_Gage_Skidmore_2.jpg/960px-Elizabeth_Olsen_by_Gage_Skidmore_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elizabeth_Olsen_by_Gage_Skidmore_2.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
+        "image": "elizabeth-olsen-reference-3.jpg",
+        "sha256": "35c7e2017b1b7cf2d5c5d9a0c25208c036c68b6d2b64b99d29bbbe6d37ffb6e9"
+      }
+    ]
   },
   {
     "id": "emma-watson",
     "name": "Emma Watson",
+    "collection": "actresses",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Emma_Watson_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emma_Watson_2013.jpg",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "attribution": "Georges Biard; Wikimedia Commons; resized reference image",
     "image": "emma-watson.jpg",
-    "sha256": "179f6865d27ed72f84b3ada5825c5c34f466a5dc925475980c734df7433e2c58"
+    "sha256": "179f6865d27ed72f84b3ada5825c5c34f466a5dc925475980c734df7433e2c58",
+    "references": [
+      {
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Emma_Watson_2%2C_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emma_Watson_2,_2013.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Georges Biard; Wikimedia Commons; resized reference image",
+        "image": "emma-watson-reference-2.jpg",
+        "sha256": "a0f20b744f0cb4155510cee021023d78ce16739923282bb1439b31171eff5ddb"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Emma_Watson_2012_Shankbone.JPG/960px-Emma_Watson_2012_Shankbone.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Emma_Watson_2012_Shankbone.JPG",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "attribution": "David Shankbone; Wikimedia Commons; resized reference image",
+        "image": "emma-watson-reference-3.jpg",
+        "sha256": "838dfe3d27bd075c1caa06d2e621c2f5084610456f3ca3cea9c1d1e24a3bb9c6"
+      }
+    ]
   },
   {
     "id": "gal-gadot",
     "name": "Gal Gadot",
-    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Gal_Gadot_by_Gage_Skidmore_3.jpg/1280px-Gal_Gadot_by_Gage_Skidmore_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "collection": "actresses",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Gal_Gadot_by_Gage_Skidmore_3.jpg/330px-Gal_Gadot_by_Gage_Skidmore_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gal_Gadot_by_Gage_Skidmore_3.jpg",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
     "image": "gal-gadot.jpg",
-    "sha256": "12ece9b14708d42b6c0e45bdcd9a625ef13363417e0a7e008f316ff4ba4a27e7"
+    "sha256": "c25ab817b9b829485229bd695c2120d1a124556a685617858093a5ccaeaf7850",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Gal_Gadot_SDCC_2014.jpg/960px-Gal_Gadot_SDCC_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gal_Gadot_SDCC_2014.jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
+        "image": "gal-gadot-reference-2.jpg",
+        "sha256": "0d6027c35d0861fbbf161a8ce6bd89e10f4d4093b3436947fc23e062ed0cf5c4"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Gal_Gadot_for_Revlon_5.jpg/960px-Gal_Gadot_for_Revlon_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gal_Gadot_for_Revlon_5.jpg",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "attribution": "Rogue Artists; Wikimedia Commons; resized reference image",
+        "image": "gal-gadot-reference-3.jpg",
+        "sha256": "2512e7f1bf48fb39e5e6538c534175c2e5af842cbbb5e90a86fd211704371ad3"
+      }
+    ]
   },
   {
     "id": "hailee-steinfeld",
     "name": "Hailee Steinfeld",
-    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Hailee_Steinfeld_by_Gage_Skidmore.jpg/1280px-Hailee_Steinfeld_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "collection": "actresses",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Hailee_Steinfeld_by_Gage_Skidmore.jpg/330px-Hailee_Steinfeld_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hailee_Steinfeld_by_Gage_Skidmore.jpg",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
     "image": "hailee-steinfeld.jpg",
-    "sha256": "d004f6771a75d36fb670b2bb4789def6a390f21137b2560a849f9062ea57cc28"
+    "sha256": "d6379fda419f483547588eec1adcbc8d64136a3cc649290c4b634b0490723cea",
+    "references": [
+      {
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Hailee_Steinfeld_4_%2843005821651%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hailee_Steinfeld_4_(43005821651)_(cropped).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "attribution": "https://www.flickr.com/photos/marcen27/; Wikimedia Commons; resized reference image",
+        "image": "hailee-steinfeld-reference-2.jpg",
+        "sha256": "ff8f8482ea60b97a0b77b3aa6217e3a1335d03c7436eb522545f356dd76a8d6a"
+      },
+      {
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Hailee_Steinfeld_Peabody_Award_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hailee_Steinfeld_Peabody_Award_2020.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Peabody Awards; Wikimedia Commons; resized reference image",
+        "image": "hailee-steinfeld-reference-3.jpg",
+        "sha256": "683bc7a37bce4f3a7249b333eaeef346e748854e98f4c5fb991b57ea39a5e763"
+      }
+    ]
   },
   {
     "id": "henry-cavill",
     "name": "Henry Cavill",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Henry_Cavill_%2848417913146%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "collection": "actors",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Henry_Cavill_%2848417913146%29_%28cropped%29.jpg/330px-Henry_Cavill_%2848417913146%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Henry_Cavill_(48417913146)_(cropped).jpg",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "attribution": "Gage Skidmore from Peoria, AZ, United States of America; Wikimedia Commons; resized reference image",
     "image": "henry-cavill.jpg",
-    "sha256": "07f8d5f9583ef1cf6647cf1e076cf55af0968d8571734482efb8c724f6d33cfd"
+    "sha256": "e070cdf9a946b679f62ed9d1f49ac23f2be5a9b2e6bd95f17efc299b2d2367f2",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Henry_Cavill_%2828487498052%29_%28cropped%29.jpg/960px-Henry_Cavill_%2828487498052%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Henry_Cavill_(28487498052)_(cropped).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Gage Skidmore from Peoria, AZ, United States of America; Wikimedia Commons; resized reference image",
+        "image": "henry-cavill-reference-2.jpg",
+        "sha256": "aed9df4b81ba25d8987ca41759af10f9d9754487c078758f2d76f316afd06e38"
+      },
+      {
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Henry_Cavill_Man_of_Steel_Comic_Con_2013_1_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Henry_Cavill_Man_of_Steel_Comic_Con_2013_1_(cropped).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Sue Lukenbaugh; Wikimedia Commons; resized reference image",
+        "image": "henry-cavill-reference-3.jpg",
+        "sha256": "49cfbf6d7fdabebb7ce77b8018b1a4b604f988f7f4b485de9d8755a884a121a6"
+      }
+    ]
   },
   {
     "id": "jenna-ortega",
     "name": "Jenna Ortega",
-    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Jenna_Ortega-63799_%28cropped%29.jpg/1280px-Jenna_Ortega-63799_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "collection": "actresses",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Jenna_Ortega-63799_%28cropped%29.jpg/330px-Jenna_Ortega-63799_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jenna_Ortega-63799_(cropped).jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Harald Krichel; Wikimedia Commons; resized reference image",
     "image": "jenna-ortega.jpg",
-    "sha256": "ec8c7b7ff3a60907d7b2a2412fc07de74f70eaec9ffb8c0a8cababa441d7fb71"
+    "sha256": "e69dfce1992ada17224b37916c2cd18fa931ff0ce0470d9d7a3d9fe42dc896b4",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Jenna_Ortega_at_the_2026_Sundance_Film_Festival_%28cropped%29.jpg/960px-Jenna_Ortega_at_the_2026_Sundance_Film_Festival_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jenna_Ortega_at_the_2026_Sundance_Film_Festival_(cropped).jpg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "attribution": "Colleen Sturtevant; Wikimedia Commons; resized reference image",
+        "image": "jenna-ortega-reference-2.jpg",
+        "sha256": "6981ae391d4ea7a18dc765eeb63c0e8ace8efb1d92b14c3aedff0760005612f5"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Jenna_Ortega_2025_%283%29.png/960px-Jenna_Ortega_2025_%283%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jenna_Ortega_2025_(3).png",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "attribution": "Irene Suwandi; Wikimedia Commons; resized reference image",
+        "image": "jenna-ortega-reference-3.png",
+        "sha256": "5dc0d23227f541faaa578c85cd707ec8d980669378feb3ae583b8c9d8c0eee90"
+      }
+    ]
   },
   {
     "id": "jennifer-lawrence",
     "name": "Jennifer Lawrence",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Jennifer_Lawrence%2C_Cannes_Film_Festival_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "collection": "actresses",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Jennifer_Lawrence%2C_Cannes_Film_Festival_2025.jpg/330px-Jennifer_Lawrence%2C_Cannes_Film_Festival_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jennifer_Lawrence,_Cannes_Film_Festival_2025.jpg",
     "license": "CC BY 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
     "attribution": "Ciné Zooms 2; Wikimedia Commons; resized reference image",
     "image": "jennifer-lawrence.jpg",
-    "sha256": "29eb5ca650f40eba9e0fe1471c3937366941db7b13fec636a769d4fa9a3603a9"
+    "sha256": "41da8b6ca1c6d95e0812063477b93ad6a9e70a1f55dbba75144bce749537dc05",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Jennifer_Lawrence_Oscars_2016.jpg/330px-Jennifer_Lawrence_Oscars_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jennifer_Lawrence_Oscars_2016.jpg",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "attribution": "Fashion Passport TV; Wikimedia Commons; resized reference image",
+        "image": "jennifer-lawrence-reference-2.jpg",
+        "sha256": "5746d69a719d9e1870edf070f1acfe4748f8c82010677363b729c9e092fb8aae"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Jennifer_Lawrence_at_San_Diego_Comic-Con_2015.jpg/330px-Jennifer_Lawrence_at_San_Diego_Comic-Con_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jennifer_Lawrence_at_San_Diego_Comic-Con_2015.jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Dominick D; Wikimedia Commons; resized reference image",
+        "image": "jennifer-lawrence-reference-3.jpg",
+        "sha256": "0a226b64f727873fe193fdbaa9ae23242731eceaee8980a9946c6be2c353f98c"
+      }
+    ]
   },
   {
     "id": "keanu-reeves",
     "name": "Keanu Reeves",
+    "collection": "actors",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Keanu_Reeves_at_TIFF_2025_02_%28Cropped%29.jpg/1280px-Keanu_Reeves_at_TIFF_2025_02_%28Cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Keanu_Reeves_at_TIFF_2025_02_(Cropped).jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Gabriel Hutchinson; Wikimedia Commons; resized reference image",
     "image": "keanu-reeves.jpg",
-    "sha256": "dca28ff3d21fade29c208db7c25a8f79a088cf911bd37e2b749b6323284d4faa"
+    "sha256": "dca28ff3d21fade29c208db7c25a8f79a088cf911bd37e2b749b6323284d4faa",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Reuni%C3%A3o_com_o_ator_norte-americano_Keanu_Reeves_%2846806576944%29_%28cropped%29.jpg/330px-Reuni%C3%A3o_com_o_ator_norte-americano_Keanu_Reeves_%2846806576944%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Reuni%C3%A3o_com_o_ator_norte-americano_Keanu_Reeves_(46806576944)_(cropped).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "attribution": "Governo do Estado de São Paulo; Wikimedia Commons; resized reference image",
+        "image": "keanu-reeves-reference-2.jpg",
+        "sha256": "cca174358d59d0931a1faa34752b4f482bbd5c243381770679b0dd257cbedcb9"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Keanu_Reeves_%28Berlin_Film_Festival_2009%29_2.jpg/330px-Keanu_Reeves_%28Berlin_Film_Festival_2009%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Keanu_Reeves_(Berlin_Film_Festival_2009)_2.jpg",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "attribution": "Siebbi; Wikimedia Commons; resized reference image",
+        "image": "keanu-reeves-reference-3.jpg",
+        "sha256": "7dc9be5f3bbcbfc5c2f87cf9b8b915155bcfd89b0b5733bd941580a6957030d1"
+      }
+    ]
   },
   {
     "id": "leonardo-dicaprio",
     "name": "Leonardo DiCaprio",
+    "collection": "actors",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/LeoPTABFI191125-28_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:LeoPTABFI191125-28_(cropped).jpg",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "attribution": "Raph_PH; Wikimedia Commons; resized reference image",
     "image": "leonardo-dicaprio.jpg",
-    "sha256": "75f485f49c131112d30799dad122fbefa23ede9519a7eb96721c77952f80f16c"
+    "sha256": "75f485f49c131112d30799dad122fbefa23ede9519a7eb96721c77952f80f16c",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Leonardo_DiCaprio.jpeg/330px-Leonardo_DiCaprio.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio.jpeg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "attribution": "Jaud (de:Benutzer:Falkenauge); Wikimedia Commons; resized reference image",
+        "image": "leonardo-dicaprio-reference-2.jpg",
+        "sha256": "abc44c2394bebf90e7c8a066c8cedd0306adab8a7dea5405e6d970f1e6ed6fc4"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Leonardo_DiCaprio_2014.jpg/330px-Leonardo_DiCaprio_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leonardo_DiCaprio_2014.jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Christopher William Adach from London, UK; Wikimedia Commons; resized reference image",
+        "image": "leonardo-dicaprio-reference-3.jpg",
+        "sha256": "cebfaae93e2736f6a1ce559b93603c55dc1e7f037adfad4e96981047f0870748"
+      }
+    ]
   },
   {
     "id": "lupita-nyongo",
     "name": "Lupita Nyong'o",
+    "collection": "actresses",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/LupitaNyongo-byPhilipRomano3.jpg/1280px-LupitaNyongo-byPhilipRomano3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:LupitaNyongo-byPhilipRomano3.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "PhilipRomano; Wikimedia Commons; resized reference image",
     "image": "lupita-nyongo.jpg",
-    "sha256": "1ca423e84ccb5a5b030825f5b55d540dae55097b16e564ea975a54e9d7480491"
+    "sha256": "1ca423e84ccb5a5b030825f5b55d540dae55097b16e564ea975a54e9d7480491",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Lupita_Nyong%27o_%2882038%29_%28cropped%29.jpg/330px-Lupita_Nyong%27o_%2882038%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lupita_Nyong%27o_(82038)_(cropped).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "attribution": "Rhododendrites; Wikimedia Commons; resized reference image",
+        "image": "lupita-nyongo-reference-2.jpg",
+        "sha256": "dbdd961cc42b491f4953d39b0befb8e394848c6a9ab8b1586ab3caf7944d90e0"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Lupita_Nyong%27o_by_Gage_Skidmore.jpg/330px-Lupita_Nyong%27o_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lupita_Nyong%27o_by_Gage_Skidmore.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
+        "image": "lupita-nyongo-reference-3.jpg",
+        "sha256": "416a46f48342e53745ce29776adebfe10725ea3b8f0bc1ee78d5141acc380407"
+      }
+    ]
   },
   {
     "id": "margot-robbie",
     "name": "Margot Robbie",
+    "collection": "actresses",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Margot_Robbie_Wuthering_Heights_premiere_%28cropped%29.jpg/1280px-Margot_Robbie_Wuthering_Heights_premiere_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Margot_Robbie_Wuthering_Heights_premiere_(cropped).jpg",
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "attribution": "Ondine Goat; Wikimedia Commons; resized reference image",
     "image": "margot-robbie.jpg",
-    "sha256": "bf040b916887148dabc8c442f1c049e91e59c2b81a803591f5765cca64f77b8e"
+    "sha256": "bf040b916887148dabc8c442f1c049e91e59c2b81a803591f5765cca64f77b8e",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Margot_Robbie_2019_by_Glenn_Francis_%28cropped%29.jpg/330px-Margot_Robbie_2019_by_Glenn_Francis_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Margot_Robbie_2019_by_Glenn_Francis_(cropped).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "attribution": "Toglenn; Wikimedia Commons; resized reference image",
+        "image": "margot-robbie-reference-2.jpg",
+        "sha256": "f6a555e053ab05d5fd5ede460040aff1fdfa8db60ecf4e2c253e16e3b54bb665"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Margot_Robbie_by_Gage_Skidmore.jpg/330px-Margot_Robbie_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Margot_Robbie_by_Gage_Skidmore.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
+        "image": "margot-robbie-reference-3.jpg",
+        "sha256": "b81be70b7c064ab7f610a036f494781a00f64ce6099c4aa9bb6d92614e80b392"
+      }
+    ]
   },
   {
     "id": "michael-b-jordan",
     "name": "Michael B. Jordan",
+    "collection": "actors",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Michael_B_Jordan_-_Sinners_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michael_B_Jordan_-_Sinners_(cropped).jpg",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "attribution": "Kevin Paul; Wikimedia Commons; resized reference image",
     "image": "michael-b-jordan.jpg",
-    "sha256": "69cbc64b75abfe1263fadb5c2c8f20dd5a616eeb0b52f936c5f687d84de01a4c"
+    "sha256": "69cbc64b75abfe1263fadb5c2c8f20dd5a616eeb0b52f936c5f687d84de01a4c",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/2018-05-12-_Cannes-L%27acteur_Michael_B._Jordan-2721_%2842075892224%29.jpg/330px-2018-05-12-_Cannes-L%27acteur_Michael_B._Jordan-2721_%2842075892224%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018-05-12-_Cannes-L%27acteur_Michael_B._Jordan-2721_(42075892224).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "attribution": "Joan Hernandez Mir; Wikimedia Commons; resized reference image",
+        "image": "michael-b-jordan-reference-2.jpg",
+        "sha256": "7d242ee77f61ffe3d4e22297c278f6c26abd5abdbc0a3ded70f5565e3b20e52c"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Michael_B._Jordan_by_Gage_Skidmore_3.jpg/330px-Michael_B._Jordan_by_Gage_Skidmore_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michael_B._Jordan_by_Gage_Skidmore_3.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
+        "image": "michael-b-jordan-reference-3.jpg",
+        "sha256": "15827a57db254b9ce3cee94342c47a5d8ed6fecf68b8735b7199ba8e722ad268"
+      }
+    ]
   },
   {
     "id": "natalie-portman",
     "name": "Natalie Portman",
+    "collection": "actresses",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/NataliePortman.jpg/1280px-NataliePortman.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:NataliePortman.jpg",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "attribution": "Colleen Sturtevant; Wikimedia Commons; resized reference image",
     "image": "natalie-portman.jpg",
-    "sha256": "49c1c863b5b6faab8891f7824752d7b2debc3684609f3046e8bc96ae679b0b75"
+    "sha256": "49c1c863b5b6faab8891f7824752d7b2debc3684609f3046e8bc96ae679b0b75",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Natalie_Portman_%2848470988352%29.jpg/330px-Natalie_Portman_%2848470988352%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Natalie_Portman_(48470988352).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Gage Skidmore from Peoria, AZ, United States of America; Wikimedia Commons; resized reference image",
+        "image": "natalie-portman-reference-2.jpg",
+        "sha256": "693a36d33fa5453616b82ca49fe609199fd9a03194940611aa491a9c05b189ec"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Natalie_Portman_Cannes_2008.jpg/330px-Natalie_Portman_Cannes_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Natalie_Portman_Cannes_2008.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Georges Biard; Wikimedia Commons; resized reference image",
+        "image": "natalie-portman-reference-3.jpg",
+        "sha256": "0c55c4dbf91036b74e3272e9e15c3150744a886e0b1f8b401316f65b98cbe580"
+      }
+    ]
   },
   {
     "id": "oscar-isaac",
     "name": "Oscar Isaac",
+    "collection": "actors",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Oscar_Isaac_at_82nd_Venice_International_Film_Festival-1_%28cropped%29.jpg/1280px-Oscar_Isaac_at_82nd_Venice_International_Film_Festival-1_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oscar_Isaac_at_82nd_Venice_International_Film_Festival-1_(cropped).jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "LucaFazPhoto; Wikimedia Commons; resized reference image",
     "image": "oscar-isaac.jpg",
-    "sha256": "2e1aa5218481024d907aa74b5eb0b32fbd4cb1cb1f597fc3d8619e59463510c3"
+    "sha256": "2e1aa5218481024d907aa74b5eb0b32fbd4cb1cb1f597fc3d8619e59463510c3",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Oscar_Isaac_%2830694590031%29.jpg/330px-Oscar_Isaac_%2830694590031%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oscar_Isaac_(30694590031).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Gordon  Correll; Wikimedia Commons; resized reference image",
+        "image": "oscar-isaac-reference-2.jpg",
+        "sha256": "c6a5b6fe05d4849166af20054624ecb588fe1f1fd1610eff598b955c9a8b1bd0"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Oscar_Isaac_at_the_New_York_Premiere_of_Won%27t_Back_Down%2C_September_2012.jpg/330px-Oscar_Isaac_at_the_New_York_Premiere_of_Won%27t_Back_Down%2C_September_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oscar_Isaac_at_the_New_York_Premiere_of_Won%27t_Back_Down,_September_2012.jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "© Joella Marano; Wikimedia Commons; resized reference image",
+        "image": "oscar-isaac-reference-3.jpg",
+        "sha256": "63f7a72b017b546e8b31af42f157cc949321eb30a17e6c0c97674c47288ad0e4"
+      }
+    ]
   },
   {
     "id": "pedro-pascal",
     "name": "Pedro Pascal",
+    "collection": "actors",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Pedro_Pascal_at_the_2026_New_York_Film_Festival-042.jpg/1280px-Pedro_Pascal_at_the_2026_New_York_Film_Festival-042.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pedro_Pascal_at_the_2026_New_York_Film_Festival-042.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Bryan Berlin; Wikimedia Commons; resized reference image",
     "image": "pedro-pascal.jpg",
-    "sha256": "f023efa8f9e066c91b061c1df408c68069906818a37c07dfff76c9e590e8429d"
+    "sha256": "f023efa8f9e066c91b061c1df408c68069906818a37c07dfff76c9e590e8429d",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Pedro_Pascal_%2814588037218%29.jpg/330px-Pedro_Pascal_%2814588037218%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pedro_Pascal_(14588037218).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Gage Skidmore from Peoria, AZ, United States of America; Wikimedia Commons; resized reference image",
+        "image": "pedro-pascal-reference-2.jpg",
+        "sha256": "4551d4c6ea740f734b8863883102402e0cc3714817fb8814883336f1d66eddc9"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Pedro_Pascal_%2836124158715%29.jpg/330px-Pedro_Pascal_%2836124158715%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pedro_Pascal_(36124158715).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Gage Skidmore from Peoria, AZ, United States of America; Wikimedia Commons; resized reference image",
+        "image": "pedro-pascal-reference-3.jpg",
+        "sha256": "86594c68b7c346e17a45eca5aed3f1565d8b284d44c895849ca07dd6cc255cc9"
+      }
+    ]
   },
   {
     "id": "robert-downey-jr",
     "name": "Robert Downey Jr.",
+    "collection": "actors",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/RobertDowneyJr-byPhilipRomano7_%28cropped%29.jpg/1280px-RobertDowneyJr-byPhilipRomano7_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:RobertDowneyJr-byPhilipRomano7_(cropped).jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "PhilipRomano; Wikimedia Commons; resized reference image",
     "image": "robert-downey-jr.jpg",
-    "sha256": "b8fc19dc70c54fb2ea0f99cb87f14d1d726d7de79bbba75c02f269f596ee266a"
+    "sha256": "b8fc19dc70c54fb2ea0f99cb87f14d1d726d7de79bbba75c02f269f596ee266a",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Robert_Downey_Jr-2008_cropped.JPG/330px-Robert_Downey_Jr-2008_cropped.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robert_Downey_Jr-2008_cropped.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Robert_Downey_Jr-2008.JPG: Edgar Meritano\nderivative work: RanZag (talk); Wikimedia Commons; resized reference image",
+        "image": "robert-downey-jr-reference-2.jpg",
+        "sha256": "3787cb9f8dccbba3472680326107d066a2f288d1011a02e6b19ede3de0f6a46e"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Robert_Downey_Jr._2014_Comic-Con.jpg/330px-Robert_Downey_Jr._2014_Comic-Con.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robert_Downey_Jr._2014_Comic-Con.jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
+        "image": "robert-downey-jr-reference-3.jpg",
+        "sha256": "27534c272597bffbe04f97541fb1201b521bad2fe21987d6a5ff800faeaf1612"
+      }
+    ]
   },
   {
     "id": "robert-pattinson",
     "name": "Robert Pattinson",
+    "collection": "actors",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Robert_Pattinson_Venice_Film_Festival_%28cropped%29.jpg/1280px-Robert_Pattinson_Venice_Film_Festival_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robert_Pattinson_Venice_Film_Festival_(cropped).jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Colleen Sturtevant; Wikimedia Commons; resized reference image",
     "image": "robert-pattinson.jpg",
-    "sha256": "1ff360937a2cf3fc1aca811c91685c4d0b8b3be54390a700d60991d752ac8485"
+    "sha256": "1ff360937a2cf3fc1aca811c91685c4d0b8b3be54390a700d60991d752ac8485",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Robert_Pattinson_at_Berlinale_2025.jpg/330px-Robert_Pattinson_at_Berlinale_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robert_Pattinson_at_Berlinale_2025.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Elena Ternovaja; Wikimedia Commons; resized reference image",
+        "image": "robert-pattinson-reference-2.jpg",
+        "sha256": "26c3937d65bcc4546c77496902d99985d7d52826ebdfbc87222248919792031a"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Robert_Pattinson_Cannes_2014.jpg/330px-Robert_Pattinson_Cannes_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robert_Pattinson_Cannes_2014.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Georges Biard; Wikimedia Commons; resized reference image",
+        "image": "robert-pattinson-reference-3.jpg",
+        "sha256": "9d75cc20494c0fca9f8b029e9c5689088a049e7eed191fed9800ecde9554c8b2"
+      }
+    ]
   },
   {
     "id": "ryan-reynolds",
     "name": "Ryan Reynolds",
+    "collection": "actors",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Deadpool_2_Japan_Premiere_Red_Carpet_Ryan_Reynolds_%28cropped%29.jpg/1280px-Deadpool_2_Japan_Premiere_Red_Carpet_Ryan_Reynolds_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deadpool_2_Japan_Premiere_Red_Carpet_Ryan_Reynolds_(cropped).jpg",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "attribution": "Dick Thomas Johnson from Tokyo, Japan; Wikimedia Commons; resized reference image",
     "image": "ryan-reynolds.jpg",
-    "sha256": "dbb14decb49a7cbde7052690f9308713fd160fd5b1d4c42b5258dd7abf5a35e3"
+    "sha256": "dbb14decb49a7cbde7052690f9308713fd160fd5b1d4c42b5258dd7abf5a35e3",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Ryan_Reynolds_by_Gage_Skidmore_4.jpg/330px-Ryan_Reynolds_by_Gage_Skidmore_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ryan_Reynolds_by_Gage_Skidmore_4.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
+        "image": "ryan-reynolds-reference-2.jpg",
+        "sha256": "ac3a29eae37d583b0200a35fb85d1c8dbb459df869bcad7a5dc735f9502d2dd9"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Ryan_Reynolds_at_the_2025_Toronto_International_Film_Festival_%28cropped%29.jpg/330px-Ryan_Reynolds_at_the_2025_Toronto_International_Film_Festival_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ryan_Reynolds_at_the_2025_Toronto_International_Film_Festival_(cropped).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "attribution": "Gabriel Hutchinson; Wikimedia Commons; resized reference image",
+        "image": "ryan-reynolds-reference-3.jpg",
+        "sha256": "9a3c78428ddea0bd56dac901ed2ab9e3727f84161481acedb7a8ff5ce41e5ed4"
+      }
+    ]
   },
   {
     "id": "saoirse-ronan",
     "name": "Saoirse Ronan",
+    "collection": "actresses",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/MKr349648_Saoirse_Ronan_%28The_Outrun%2C_Berlinale_2024%29.jpg/1280px-MKr349648_Saoirse_Ronan_%28The_Outrun%2C_Berlinale_2024%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:MKr349648_Saoirse_Ronan_(The_Outrun,_Berlinale_2024).jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Martin Kraft; Wikimedia Commons; resized reference image",
     "image": "saoirse-ronan.jpg",
-    "sha256": "fc162c45b7d0e3e0a1288b845806a5de77290675a503232e6b74923e29c387eb"
+    "sha256": "fc162c45b7d0e3e0a1288b845806a5de77290675a503232e6b74923e29c387eb",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Saoirse_Ronan_in_2018.png/330px-Saoirse_Ronan_in_2018.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saoirse_Ronan_in_2018.png",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "attribution": "MTV International; Wikimedia Commons; resized reference image",
+        "image": "saoirse-ronan-reference-2.png",
+        "sha256": "738029691c232a9a9cc3c2c90f2f412a3992d754abdee7eafe7a6b1aa875092b"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Saoirse_Ronan_in_2024_%28cropped%29.jpg/330px-Saoirse_Ronan_in_2024_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saoirse_Ronan_in_2024_(cropped).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "attribution": "https://www.flickr.com/photos/drlovell/; Wikimedia Commons; resized reference image",
+        "image": "saoirse-ronan-reference-3.jpg",
+        "sha256": "22c241db4dc2c2a4eb022187811d5bd7d81dfc435aec25c545449df6b5fc41d7"
+      }
+    ]
   },
   {
     "id": "scarlett-johansson",
     "name": "Scarlett Johansson",
+    "collection": "actresses",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Scarlett_Johansson-8588.jpg/1280px-Scarlett_Johansson-8588.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scarlett_Johansson-8588.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Harald Krichel; Wikimedia Commons; resized reference image",
     "image": "scarlett-johansson.jpg",
-    "sha256": "c007661892801b2a1dc6d204f7b155b2ad9f3ef86f239d7a6734d7f1eab35445"
+    "sha256": "c007661892801b2a1dc6d204f7b155b2ad9f3ef86f239d7a6734d7f1eab35445",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Ghost_In_The_Shell_World_Premiere_Red_Carpet%2C_Scarlett_Johansson_%28cropped%29.JPG/330px-Ghost_In_The_Shell_World_Premiere_Red_Carpet%2C_Scarlett_Johansson_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ghost_In_The_Shell_World_Premiere_Red_Carpet,_Scarlett_Johansson_(cropped).JPG",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "attribution": "File:Ghost In The Shell World Premiere Red Carpet- Scarlett Johansson (23552743818).jpg: Dick Thomas Johnson from Tokyo, Japan\nderivative work: Minerva97; Wikimedia Commons; resized reference image",
+        "image": "scarlett-johansson-reference-2.jpg",
+        "sha256": "09f22410c93aa78a2d3b7e935436508888a83d221cd85ce1fc6462785c5ec836"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Goldene_Kamera_2012_-_Scarlett_Johansson_3_%28cropped%2C_2%29.JPG/330px-Goldene_Kamera_2012_-_Scarlett_Johansson_3_%28cropped%2C_2%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goldene_Kamera_2012_-_Scarlett_Johansson_3_(cropped,_2).JPG",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "attribution": "JCS; Wikimedia Commons; resized reference image",
+        "image": "scarlett-johansson-reference-3.jpg",
+        "sha256": "7c04ae52db684998ebe4a1b92d0254e57d21a4d39c80f8a55c452893d319b0f6"
+      }
+    ]
   },
   {
     "id": "sydney-sweeney",
     "name": "Sydney Sweeney",
+    "collection": "actresses",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Sydney_Sweeney_at_the_2024_Toronto_International_Film_Festival_01_%283x4_cropped_and_rotated%29.jpg/1280px-Sydney_Sweeney_at_the_2024_Toronto_International_Film_Festival_01_%283x4_cropped_and_rotated%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sydney_Sweeney_at_the_2024_Toronto_International_Film_Festival_01_(3x4_cropped_and_rotated).jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Jay Dixit; Wikimedia Commons; resized reference image",
     "image": "sydney-sweeney.jpg",
-    "sha256": "b804a9a68f00fa41b7ca11f03493e5de87a66a650e4b3ad42768224ae60cdd8c"
+    "sha256": "b804a9a68f00fa41b7ca11f03493e5de87a66a650e4b3ad42768224ae60cdd8c",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Sydney_Sweeney_at_Berlinale_2023_%28portrait%29.jpg/330px-Sydney_Sweeney_at_Berlinale_2023_%28portrait%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sydney_Sweeney_at_Berlinale_2023_(portrait).jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Elena Ternovaja; Wikimedia Commons; resized reference image",
+        "image": "sydney-sweeney-reference-2.jpg",
+        "sha256": "4362eb4310a9e666394ca18f02131dd74639df0c07e5077c96382f8c41f6d34e"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Sydney_Sweeney.jpg/330px-Sydney_Sweeney.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sydney_Sweeney.jpg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "attribution": "Raph_PH; Wikimedia Commons; resized reference image",
+        "image": "sydney-sweeney-reference-3.jpg",
+        "sha256": "c3dddc62faaf74b565047b010af722300fb717882aa274348c1fcf3ef99dfabe"
+      }
+    ]
   },
   {
     "id": "tom-holland",
     "name": "Tom Holland",
+    "collection": "actors",
     "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/TomHolland-byPhilipRomano.jpg/1280px-TomHolland-byPhilipRomano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:TomHolland-byPhilipRomano.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "PhilipRomano; Wikimedia Commons; resized reference image",
     "image": "tom-holland.jpg",
-    "sha256": "b65ae8c327c66d0ee804da6eb5fdc7322b2f7f858776d371211fbd3d06e5aa34"
+    "sha256": "b65ae8c327c66d0ee804da6eb5fdc7322b2f7f858776d371211fbd3d06e5aa34",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Tom_Holland_by_Gage_Skidmore.jpg/330px-Tom_Holland_by_Gage_Skidmore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tom_Holland_by_Gage_Skidmore.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "attribution": "Gage Skidmore; Wikimedia Commons; resized reference image",
+        "image": "tom-holland-reference-2.jpg",
+        "sha256": "962ef4d4715803a823c35e825cdbee855f159a920e45db7c62a331a5a4765712"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Tom_Holland_during_pro-am_Wentworth_golf_club_2023-2_%28cropped%29.jpg/330px-Tom_Holland_during_pro-am_Wentworth_golf_club_2023-2_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tom_Holland_during_pro-am_Wentworth_golf_club_2023-2_(cropped).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "attribution": "ChristopherJClarke; Wikimedia Commons; resized reference image",
+        "image": "tom-holland-reference-3.jpg",
+        "sha256": "81355cb50d6898a250ab64c5deaba400e6b8c802e8c7acee7c60c40f7c35fbe2"
+      }
+    ]
   },
   {
     "id": "zoe-saldaña",
     "name": "Zoe Saldaña",
+    "collection": "actresses",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Zoe_Salda%C3%B1a_at_the_2024_Toronto_International_Film_Festival_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zoe_Salda%C3%B1a_at_the_2024_Toronto_International_Film_Festival_(cropped).jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "attribution": "Kevin Payravi; Wikimedia Commons; resized reference image",
     "image": "zoe-saldaña.jpg",
-    "sha256": "fa585fff5a4270b1d2903fd5214769639adf923ffc137e8eceeb033e2173d9f7"
+    "sha256": "fa585fff5a4270b1d2903fd5214769639adf923ffc137e8eceeb033e2173d9f7",
+    "references": [
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Zoe_Saldana_%28Headshot%29.jpg/330px-Zoe_Saldana_%28Headshot%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zoe_Saldana_(Headshot).jpg",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "attribution": "Sgt. Michael Connors - 302nd Mobile Public Affairs Detachment; Wikimedia Commons; resized reference image",
+        "image": "zoe-saldaña-reference-2.jpg",
+        "sha256": "a0674e0c0e51d55d25c06fca19547410becd09107dedefe3fd5c5a5ae4dcf498"
+      },
+      {
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Zoe_Saldana.jpg/330px-Zoe_Saldana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zoe_Saldana.jpg",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "attribution": "lukeford.net; Wikimedia Commons; resized reference image",
+        "image": "zoe-saldaña-reference-3.jpg",
+        "sha256": "614b565834726d200d08571541661373bc433a74e1c13dfd705a3fe7a3b081f1"
+      }
+    ]
   }
 ]

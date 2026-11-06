@@ -66,3 +66,19 @@ test('preserves cancellation so the UI can ignore a stale request', async t => {
   controller.abort(new DOMException('Cancelled', 'AbortError'));
   await assert.rejects(findMatches(new File(['x'], 'x.jpg'), controller.signal), {name: 'AbortError'});
 });
+
+test('selected collection is sent and unfiltered responses cannot silently pass', async t => {
+  const file = new File(['fixture'], 'photo.png', {type:'image/png'});
+  const fixture = result();
+  fixture.collection = 'actors';
+  fixture.matches.forEach(match => { match.celebrity.collection = 'actors'; });
+  const mocked=t.mock.method(globalThis,'fetch',async (_url,options)=>{
+    assert.equal(options.body.get('collection'),'actors');
+    return Response.json(fixture);
+  });
+  assert.equal((await findMatches(file,new AbortController().signal,'actors')).collection,'actors');
+  mocked.mock.mockImplementation(async()=>Response.json(result()));
+  await assert.rejects(findMatches(file,new AbortController().signal,'actors'),/did not apply/);
+  fixture.matches[0].celebrity.collection='actresses';
+  assert.throws(()=>parseMatches(fixture),/selected collection/);
+});

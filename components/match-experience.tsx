@@ -2,7 +2,9 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, ImagePlus, RotateCcw, Share2, X } from 'lucide-react';
-import { findMatches, celebrityImageUrl, type MatchResponse } from '@/lib/match-api';
+import { findMatches, celebrityImageUrl, type MatchResponse, type Collection } from '@/lib/match-api';
+
+const collectionNames = { all: 'All celebrities', actors: 'Actors', actresses: 'Actresses' };
 
 const loadingMessages = ['Looking for your famous twin...', 'Analyzing facial features...', 'Finding your closest matches...'];
 
@@ -12,6 +14,7 @@ export default function MatchExperience() {
   const resultHeading = useRef<HTMLHeadingElement>(null);
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState('');
+  const [collection, setCollection] = useState<Collection>('all');
   const [consent, setConsent] = useState(false);
   const [error, setError] = useState('');
   const [result, setResult] = useState<MatchResponse | null>(null);
@@ -59,7 +62,7 @@ export default function MatchExperience() {
     setBusy(true); setError(''); setNotice('');
     const timeout = setTimeout(() => controller.abort('timeout'), 60_000);
     try {
-      const matches = await findMatches(file, controller.signal);
+      const matches = await findMatches(file, controller.signal, collection);
       if (request.current === controller) setResult(matches);
     } catch (error) {
       if (request.current !== controller) return;
@@ -75,7 +78,7 @@ export default function MatchExperience() {
   async function share() {
     if (!result) return;
     const best = result.matches[0];
-    const text = `My closest Hollywood match on Celebry is ${best.celebrity.name}! Cosine similarity: ${best.cosineSimilarity.toFixed(3)}. Just for fun, not an identity probability.`;
+    const text = `My closest Hollywood match on Celebry (${collectionNames[result.collection]}) is ${best.celebrity.name}! Cosine similarity: ${best.cosineSimilarity.toFixed(3)}. Just for fun, not an identity probability.`;
     try {
       if (navigator.share) await navigator.share({ title: 'My Celebry match', text });
       else { await navigator.clipboard.writeText(text); setNotice('Result copied. Paste it wherever you’d like to share.'); }
@@ -93,6 +96,11 @@ export default function MatchExperience() {
         <div className="upload-card">
           <div className="card-top"><span>{result ? 'YOUR RESULTS' : 'YOUR PHOTO'}</span><span>{result ? '02 / 02' : '01 / 02'}</span></div>
           {!result ? <>
+            <fieldset className="collection-picker" disabled={busy}>
+              <legend>Who would you like to match with?</legend>
+              <div className="collection-options">{(Object.keys(collectionNames) as Collection[]).map(value => <label key={value} className={collection === value ? 'selected' : ''}><input type="radio" name="collection" value={value} checked={collection === value} onChange={() => { setCollection(value); setError(''); }}/><span>{collectionNames[value]}</span></label>)}</div>
+              <p>You choose the collection. We don’t infer gender from your photo.</p>
+            </fieldset>
             <div className={'dropzone ' + (dragging ? 'dragging' : '')} onDragOver={event => { event.preventDefault(); if (!busy) setDragging(true); }} onDragLeave={() => setDragging(false)} onDrop={event => { event.preventDefault(); setDragging(false); if (event.dataTransfer.files.length !== 1) setError('Please choose one photo at a time.'); else choose(event.dataTransfer.files[0]); }}>
               {preview ? <div className="preview"><img src={preview} alt="Your selected selfie preview"/><button className="remove" onClick={reset} disabled={busy} aria-label="Remove photo"><X size={18}/></button><span>{file?.name}</span></div> : <><div className="upload-icon"><ImagePlus size={30} strokeWidth={1.5}/></div><h2 className="upload-title">Drop your selfie here</h2><p>or <button className="text-button" onClick={() => input.current?.click()}>browse your files</button></p><small>JPG, PNG or WebP · up to 10 MB</small></>}
             </div>
@@ -105,6 +113,7 @@ export default function MatchExperience() {
             <p className="demo-note">Your photo is processed by our backend and discarded after analysis.</p>
           </> : top && <div className="result live-result">
             <div className="result-heading"><div><span className="sample">YOUR CLOSEST MATCH</span><h2 ref={resultHeading} tabIndex={-1}>Your star moment.</h2></div><button className="remove-inline" onClick={reset} aria-label="Start over"><X size={18}/></button></div>
+            <p className="collection-context">{collectionNames[result.collection]} · {top.celebrity.referenceCount} reference {top.celebrity.referenceCount === 1 ? 'photo' : 'photos'} for this celebrity</p>
             <div className="comparison"><div><img src={preview} alt="Your uploaded selfie"/><span>YOU</span></div><b aria-hidden="true">✳</b><div><img width={360} height={420} src={celebrityImageUrl(top.celebrity.id)} alt={top.celebrity.name}/><span>CLOSEST OF {result.catalogSize} FACES</span></div></div>
             <div className="result-name"><strong>{top.celebrity.name} <i aria-hidden="true">✦</i></strong><small>Cosine similarity <b>{top.cosineSimilarity.toFixed(3)}</b></small></div>
             <p className="score-explanation">Cosine scores range from −1 to 1; higher means closer facial embeddings. These are relative matches in this collection of {result.catalogSize} celebrities, not percentages or identity probabilities.</p>
@@ -112,7 +121,7 @@ export default function MatchExperience() {
             <ol className="match-ranking">{result.matches.map(match => <li key={match.celebrity.id}><span className="rank-number">{String(match.rank).padStart(2, '0')}</span><img src={celebrityImageUrl(match.celebrity.id)} alt="" loading="lazy" width={44} height={52}/><span className="rank-name">{match.celebrity.name}</span><span className="rank-score" aria-label={`Cosine similarity ${match.cosineSimilarity.toFixed(3)}`}>{match.cosineSimilarity.toFixed(3)}</span></li>)}</ol>
             <div className="result-actions"><button className="button button-dark full" onClick={reset}>Try another photo <RotateCcw size={16}/></button><button className="button button-purple full" onClick={share}>Share my results <Share2 size={16}/></button></div>
             <p className="demo-note">{result.notice}</p>
-            <details className="photo-credits"><summary>Celebrity photo credits</summary>{result.matches.map(({ celebrity }) => <p key={celebrity.id}><a href={celebrity.sourceUrl} target="_blank" rel="noreferrer">{celebrity.name}</a>: {celebrity.attribution}. {celebrity.licenseUrl ? <a href={celebrity.licenseUrl} target="_blank" rel="noreferrer">{celebrity.license}</a> : celebrity.license}.</p>)}</details>
+            <details className="photo-credits"><summary>Celebrity photo credits</summary>{result.matches.map(({ celebrity }) => <div key={celebrity.id}><strong>{celebrity.name}</strong>{(celebrity.references.length ? celebrity.references : [celebrity]).map((credit, index) => <p key={`${credit.sourceUrl}-${index}`}><a href={credit.sourceUrl} target="_blank" rel="noreferrer">Reference {index + 1}</a>: {credit.attribution}. {credit.licenseUrl ? <a href={credit.licenseUrl} target="_blank" rel="noreferrer">{credit.license}</a> : credit.license}.</p>)}</div>)}</details>
           </div>}
           {notice && <p className="interaction-notice" role="status">{notice}</p>}
         </div>

@@ -99,6 +99,7 @@ test('copies text when native sharing is unavailable',async({page})=>{
 
 test('match empty/results states pass WCAG checks and fit the viewport',async({page},testInfo)=>{
   await open(page);
+  await page.screenshot({path:testInfo.outputPath('upload-collections.png'),fullPage:true});
   expect((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations).toEqual([]);
   await success(page);
   expect((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations).toEqual([]);
@@ -124,13 +125,44 @@ test('real inference returns a reference self-match in the browser',async({page}
   test.skip(!process.env.CELEBRY_REAL_BROWSER_TEST,'Requires prepared local model/catalog and running backend');
   await page.goto('/match');
   await page.locator('input[type=file]').setInputFiles('backend/data/hollywood/zendaya.jpg');
-  await agree(page); await submit(page);
+  await agree(page);
+  const response = page.waitForResponse(response => response.url().endsWith('/api/match') && response.request().method() === 'POST');
+  await submit(page);
+  const result = await (await response).json();
   await expect(page.getByRole('heading',{name:'Your star moment.'})).toBeVisible();
   await expect(page.locator('.rank-name').first()).toHaveText('Zendaya');
-  await expect(page.locator('.rank-score').first()).toHaveText('1.000');
+  await expect(page.locator('.rank-score').first()).toHaveText(result.matches[0].cosineSimilarity.toFixed(3));
+  await expect(page.locator('.collection-context')).toContainText('3 reference photos');
   await expect(page.locator('.match-ranking li')).toHaveCount(5);
   await page.locator('.match-ranking li').last().scrollIntoViewIfNeeded();
   await expect.poll(()=>page.locator('.comparison img').last().evaluate(image=>(image as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
   await expect.poll(()=>page.locator('.match-ranking img').evaluateAll(images=>images.every(image=>(image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth>0))).toBe(true);
   await page.screenshot({path:testInfo.outputPath('real-inference.png'),fullPage:true});
+  await page.getByRole('button',{name:'Try another photo'}).click();
+  await page.getByRole('radio',{name:'Actors',exact:true}).check();
+  await page.locator('input[type=file]').setInputFiles('backend/data/hollywood/tom-holland.jpg');
+  await agree(page);
+  const actorResponse=page.waitForResponse(response=>response.url().endsWith('/api/match') && response.request().method()==='POST');
+  await submit(page);
+  const actors=await (await actorResponse).json();
+  expect(actors.catalogSize).toBe(17);
+  expect(actors.matches.every((match:{celebrity:{collection:string}})=>match.celebrity.collection==='actors')).toBe(true);
+  await expect(page.locator('.rank-name').first()).toHaveText('Tom Holland');
+  await expect(page.locator('.collection-context')).toContainText('Actors');
+  await page.screenshot({path:testInfo.outputPath('real-actors.png'),fullPage:true});
+});
+
+
+test('selected collection reaches the API and survives trying another photo',async({page})=>{
+  const filtered={...fixture,collection:'actors',catalogSize:17,matches:fixture.matches.map(match=>({...match,celebrity:{...match.celebrity,collection:'actors'}}))};
+  let body='';
+  await page.route('**/api/match',route=>{body=route.request().postData()||'';return route.fulfill({json:filtered,headers})});
+  await open(page);
+  await page.getByRole('radio',{name:'Actors',exact:true}).check();
+  await choose(page); await agree(page); await submit(page);
+  await expect(page.locator('.collection-context')).toContainText('Actors');
+  await expect(page.locator('.comparison')).toContainText('CLOSEST OF 17 FACES');
+  expect(body).toContain('name="collection"\r\n\r\nactors');
+  await page.getByRole('button',{name:'Try another photo'}).click();
+  await expect(page.getByRole('radio',{name:'Actors',exact:true})).toBeChecked();
 });

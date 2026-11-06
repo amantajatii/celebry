@@ -9,7 +9,12 @@ test('frontend API client reaches real inference and receives ranked matches', {
   const result = await findMatches(new File([reference], 'reference.jpg', {type: 'image/jpeg'}), AbortSignal.timeout(60_000));
   assert.equal(result.matches.length, 5);
   assert.equal(result.matches[0].celebrity.id, 'zendaya');
-  assert.ok(result.matches[0].cosineSimilarity > .99);
+  assert.equal(result.collection, 'all');
+  assert.equal(result.matches[0].celebrity.referenceCount, 3);
+  const actors = await findMatches(new File([reference], 'reference.jpg', {type:'image/jpeg'}), AbortSignal.timeout(60_000), 'actors');
+  assert.equal(actors.catalogSize, 17);
+  assert.equal(actors.collection, 'actors');
+  assert.ok(actors.matches.every(match => match.celebrity.collection === 'actors'));
   const base = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://127.0.0.1:8000';
   const health = await fetch(`${base}/api/health`);
   assert.equal((await health.json()).matchingReady, true);

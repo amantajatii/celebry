@@ -26,7 +26,7 @@ Environment variables (set before starting):
 
 `GET /api/celebrities` returns `{"celebrities":[],"total":0}`. The list represents enrolled matching subjects, not editorial portraits. It stays empty until models and the matching catalog load successfully. Celebrity metadata schema includes id, name, imageUrl, sourceUrl, license, and attribution. No embeddings are returned.
 
-`POST /api/match` accepts multipart fields `photo` (one file) and `consent` (literal string `true`). Example using your own consenting photo:
+`POST /api/match` accepts multipart fields `photo` (one file), `consent` (literal string `true`), and optional `collection` (`all`, `actors`, or `actresses`; default `all`). Unknown or repeated fields are rejected. Collection is chosen by the user, never inferred from their face. Example using your own consenting photo:
 
 ```bash
 curl -i http://127.0.0.1:8000/api/match \
@@ -54,7 +54,7 @@ Errors have a consistent body:
 
 ## Validation and privacy
 
-Only multipart requests are accepted. The body is bounded while streaming, including requests without Content-Length, before the multipart parser runs. Limit parsing to one file and one small field. Verify decoded JPEG/PNG/WebP content with Pillow, check dimensions, reject animation, and fully decode to detect corruption. Expensive decoding runs in a worker thread. Pillow validates and applies EXIF orientation; OpenCV converts to BGR; InsightFace detects and aligns faces and generates ArcFace embeddings.
+Only multipart requests are accepted. The body is bounded while streaming, including requests without Content-Length, before the multipart parser runs. Limit parsing to one file and two small fields. Verify decoded JPEG/PNG/WebP content with Pillow, check dimensions, reject animation, and fully decode to detect corruption. Expensive decoding runs in a worker thread. Pillow validates and applies EXIF orientation; OpenCV converts to BGR; InsightFace detects and aligns faces and generates ArcFace embeddings.
 
 No selfie, EXIF, filename, embedding, or image bytes are logged or stored by application code. Multipart files can spool to OS temporary storage; file handles are closed on success and validation failures, removing those temporary files. Raw bytes are released after the request. There is no database, persistent gallery, or account system.
 
@@ -95,9 +95,9 @@ export CELEBRY_CATALOG="$PWD/data/celebrities.npz"
 .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --no-proxy-headers
 ```
 
-The setup prepares 35 public Hollywood references from Wikimedia Commons, with selections in `data/sources.json`. Existing verified downloads are reused; metadata is fetched in a batch and rate-limited responses are retried with backoff. It retrieves author, source URL, license, and license URL; refuses unreviewed license names; and records the downloaded image SHA-256. `data/hollywood-sources.json` records the sources used in this run. Image bytes and generated embeddings stay ignored by Git. Retain attribution and applicable share-alike terms when distributing references. Runtime public metadata includes the image source and credits.
+The setup prepares 105 public Hollywood reference photos for 35 celebrities from Wikimedia Commons, with selections in `data/sources.json`. Existing verified downloads are reused; metadata is fetched in a batch and rate-limited responses are retried with backoff. It retrieves author, source URL, license, and license URL; refuses unreviewed license names; and records the downloaded image SHA-256. `data/hollywood-sources.json` records the sources used in this run. Image bytes and generated embeddings stay ignored by Git. Retain attribution and applicable share-alike terms when distributing references. Runtime public metadata includes the image source and credits.
 
-For expansion, add reviewed source entries to `data/sources.json` or prepare a manifest with the same fields. Rebuild the catalog, then restart the API. Each subject must have a unique ID and exactly one detected face. The current MVP deliberately uses one reference per subject. This is a tiny, nonrepresentative research catalog, not a validated resemblance benchmark.
+For expansion, add reviewed source entries to `data/sources.json` or prepare a manifest with the same fields. Rebuild the catalog, then restart the API. Each subject must have a unique ID and every reference must contain exactly one detected face. Add extra licensed photos under `additionalFiles` in sources, or `references` in the prepared manifest. Duplicate reference bytes within a subject are rejected. Each photo retains its own source, license, attribution, and checksum. The current catalog uses three photos per subject. Curated `actors`/`actresses` labels come from written public biographical descriptions linked by `collectionSourceUrl` in `sources.json`; no demographic classifier runs. Older single-photo manifests remain supported, but unclassified subjects are excluded from either filtered collection. This is a tiny, nonrepresentative research catalog, not a validated resemblance benchmark.
 
 ### Pipeline and score definition
 
@@ -105,10 +105,10 @@ For expansion, add reviewed source entries to `data/sources.json` or prepare a m
 2. Convert RGB to OpenCV BGR and cap the longest edge at 1600 pixels.
 3. Run SCRFD at 640×640, confidence threshold 0.5; reject zero or multiple detections.
 4. Use five detected landmarks and InsightFace's ArcFace `norm_crop` alignment; generate a 512-dimensional embedding. No age, gender, or ethnicity inference runs.
-5. L2-normalize the query and cached reference embeddings.
-6. Compute `cosineSimilarity = dot(query, reference)` for unit vectors, clamp floating-point roundoff to [-1, 1], and rank descending. Ties preserve catalog order. Return five distinct celebrities with rank and public metadata, never embeddings.
+5. L2-normalize each reference embedding; average the references for each celebrity and L2-normalize that mean to make the cached profile: `profile = normalize(mean(normalize(reference_i)))`. L2-normalize the query.
+6. Apply the requested collection before selecting the top five. Compute `cosineSimilarity = dot(query, profile)` for unit vectors, clamp floating-point roundoff to [-1, 1], and rank descending. Ties preserve catalog order. Return five distinct celebrities with rank and public metadata, never embeddings.
 
-Higher cosine indicates closer model embeddings. The raw value is **not a percentage, identity probability, or calibrated human resemblance score**. There is no minimum similarity threshold: results are relative to this small catalog, so even a poor match can rank first. The response explicitly identifies the metric and entertainment limitation.
+Higher cosine indicates closer model embeddings. The raw value is **not a percentage, identity probability, or calibrated human resemblance score**. There is no minimum similarity threshold: results are relative to this small catalog, so even a poor match can rank first. The response explicitly identifies the metric and entertainment limitation. `catalogSize` is the size of the selected collection, not the entire catalog. A selected collection with fewer than five subjects returns 503 `COLLECTION_NOT_READY` and is never padded with another group. Unknown choices return 422 `INVALID_COLLECTION`. Multi-photo profiles no longer produce cosine 1.0 for an individual enrollment reference. Averaging is intended to reduce single-photo dependence; it has not been validated as improving resemblance for new users.
 
 Catalogs contain metadata, a finite 512D vector per subject, and a fingerprint combining model-file SHA-256 inputs with the preprocessing version. Startup rejects incompatible models, broken vectors, duplicate IDs, or fewer than five references. Rebuild after changing models or preprocessing. Models/catalog load once per API process, and inference runs in a worker thread. A nonblocking lock limits model execution to one request per process and returns `MATCHING_BUSY` for concurrent inference.
 
@@ -117,7 +117,9 @@ Catalog publication is atomic. API uploads are never added to the catalog; no se
 Successful response fields are documented in `/docs` (`MatchResponse`). Example structure only, with no invented score:
 
 ```text
-matches: [{rank, celebrity: {id, name, imageUrl, sourceUrl, license, licenseUrl, attribution}, cosineSimilarity}]
+collection: "all" | "actors" | "actresses"
+catalogSize: selected collection size
+matches: [{rank, celebrity: {id, name, collection, referenceCount, references: [per-photo credits], imageUrl, sourceUrl, license, licenseUrl, attribution}, cosineSimilarity}]
 metric: "cosine_similarity"
 notice: "Entertainment only. Similarity is not an identity probability."
 ```

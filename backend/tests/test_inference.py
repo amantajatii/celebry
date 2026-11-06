@@ -113,7 +113,13 @@ def test_real_inference_api():
         result = response.json()
         assert len(result['matches']) == 5
         assert result['matches'][0]['celebrity']['id'] == 'zendaya'
-        assert result['matches'][0]['cosineSimilarity'] > .99
+        assert result['matches'][0]['celebrity']['referenceCount'] >= 1
+        for collection in ('actors', 'actresses'):
+            filtered = client.post('/api/match', files={'photo': ('reference.jpg', data, 'image/jpeg')}, data={'consent': 'true', 'collection': collection})
+            assert filtered.status_code == 200, filtered.text
+            body = filtered.json()
+            assert body['collection'] == collection
+            assert all(item['celebrity']['collection'] == collection for item in body['matches'])
         blank = BytesIO()
         Image.new('RGB', (500, 500), 'white').save(blank, format='PNG')
         response = client.post('/api/match', files={'photo': ('blank.png', blank.getvalue(), 'image/png')}, data={'consent': 'true'})
@@ -136,11 +142,38 @@ def test_every_real_catalog_reference_self_matches():
     records = json.loads(Path('data/hollywood/celebrities.json').read_text())
     assert len(matcher.celebrities) == len(records)
     for reference in records:
-        result = matcher.match((Path('data/hollywood') / reference['image']).read_bytes())
+        data = (Path('data/hollywood') / reference['image']).read_bytes()
+        result = matcher.match(data)
         assert result.catalogSize == len(records)
         assert result.matches[0].celebrity.id == reference['id']
-        assert result.matches[0].cosineSimilarity > .99
+        index = next(i for i, person in enumerate(matcher.celebrities) if person.id == reference['id'])
+        expected = float(np.clip(np.dot(matcher.encoder.encode(data), matcher.embeddings[index]), -1, 1))
+        assert result.matches[0].cosineSimilarity == pytest.approx(expected, abs=1e-6)
         with Image.open(BytesIO(matcher.photos[reference['id']])) as display:
             assert display.format == 'JPEG'
             assert display.width <= 500 and display.height <= 700
             display.load()
+
+
+def test_filtering_happens_before_top_five_and_never_fills_from_another_collection(tmp_path):
+    path=catalog(tmp_path/'groups.npz')
+    with np.load(path,allow_pickle=False) as archive:
+        values={key:archive[key] for key in archive.files}
+    people=json.loads(str(values['metadata'].item()))
+    for i,person in enumerate(people):
+        person['collection']='actresses' if i==0 else 'actors'
+    values['metadata']=json.dumps(people)
+    np.savez(path,**values)
+    encoder=SimpleNamespace(fingerprint='test-model',encode=lambda _:np.eye(1,512)[0])
+    matcher=Matcher(encoder,path)
+    assert matcher.match(b'fixture').matches[0].celebrity.id=='0'
+    result=matcher.match(b'fixture','actors')
+    assert result.catalogSize==5 and result.collection=='actors'
+    assert [m.celebrity.id for m in result.matches]==['1','2','3','4','5']
+    assert all(m.celebrity.collection=='actors' for m in result.matches)
+    with pytest.raises(APIError) as error:
+        matcher.match(b'fixture','actresses')
+    assert error.value.code=='COLLECTION_NOT_READY'
+    with pytest.raises(APIError) as error:
+        matcher.match(b'fixture','unknown')
+    assert error.value.code=='INVALID_COLLECTION'

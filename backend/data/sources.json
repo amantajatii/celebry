@@ -2,176 +2,386 @@
   {
     "id": "zendaya",
     "name": "Zendaya",
-    "file": "Zendaya 2019 by Glenn Francis.jpg"
+    "file": "Zendaya 2019 by Glenn Francis.jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Zendaya-byPhilipRomano.jpg",
+      "Zendaya by Gage Skidmore.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Zendaya"
   },
   {
     "id": "timothee-chalamet",
     "name": "Timothée Chalamet",
-    "file": "Timothée Chalamet-63482 (cropped).jpg"
+    "file": "Timothée Chalamet-63482 (cropped).jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Timothée Chalamet Call Me By Your Name Press Conference Berlinale 2017 (cropped).jpg",
+      "Timothée Chalamet in 2018 (cropped).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Timoth%C3%A9e_Chalamet"
   },
   {
     "id": "florence-pugh",
     "name": "Florence Pugh",
-    "file": "Florence Pugh - The Wonder BFI London Film Festival Premiere, October 2022 (cropped).jpg"
+    "file": "Florence Pugh - The Wonder BFI London Film Festival Premiere, October 2022 (cropped).jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Florence Pugh (48471906272) (cropped).jpg",
+      "Florence Pugh 2026.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Florence_Pugh"
   },
   {
     "id": "emma-stone",
     "name": "Emma Stone",
-    "file": "Emma Stone at the 39th Mill Valley Film Festival (cropped).jpg"
+    "file": "Emma Stone at the 39th Mill Valley Film Festival (cropped).jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Emma Stone at the 2024 New York Film Festival 1 (cropped).jpg",
+      "Emma Stone at the 2025 Venice Film Festival-6313 (cropped).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Emma_Stone"
   },
   {
     "id": "ryan-gosling",
     "name": "Ryan Gosling",
-    "file": "Ryan Gosling in 2018.jpg"
+    "file": "Ryan Gosling in 2018.jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Ryan Gosling 2 Cannes 2011 (cropped).jpg",
+      "Ryan Gosling (36201256705) (cropped).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Ryan_Gosling"
   },
   {
     "id": "ana-de-armas",
     "name": "Ana de Armas",
-    "file": "Ana_de_Armas_(54462619561)_(cropped_3).jpg"
+    "file": "Ana_de_Armas_(54462619561)_(cropped_3).jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Ana de Armas by Gage Skidmore.jpg",
+      "Ana de Armas at the 2024 Toronto International Film Festival 05 (cropped).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Ana_de_Armas"
   },
   {
     "id": "andrew-garfield",
     "name": "Andrew Garfield",
-    "file": "Andrew_Garfield_at_the_2026_New_York_Film_Festival-18.jpg"
+    "file": "Andrew_Garfield_at_the_2026_New_York_Film_Festival-18.jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Andrew Garfield in 2023 (cropped).jpg",
+      "Andrew Garfield Comic-Con 2011 (Straighten Crop).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Andrew_Garfield"
   },
   {
     "id": "anne-hathaway",
     "name": "Anne Hathaway",
-    "file": "AnneHathaway-byPhilipRomano-Crop.jpg"
+    "file": "AnneHathaway-byPhilipRomano-Crop.jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Anne Hathaway 2014 (cropped).jpg",
+      "Anne Hathaway @ 2018.09.15 Human Rights Campaign National Dinner, Washington, DC USA 06198 (44713869971) (cropped 4).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Anne_Hathaway"
   },
   {
     "id": "brad-pitt",
     "name": "Brad Pitt",
-    "file": "Brad_Pitt-69858.jpg"
+    "file": "Brad_Pitt-69858.jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "War Machine Japan Premiere Red Carpet- Brad Pitt (38338138066) (cropped).jpg",
+      "Brad Pitt June 2014 (cropped).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Brad_Pitt"
   },
   {
     "id": "chris-evans",
     "name": "Chris Evans",
-    "file": "Chris_Evans_at_the_2025_Toronto_International_Film_Festival_(cropped).jpg"
+    "file": "Chris_Evans_at_the_2025_Toronto_International_Film_Festival_(cropped).jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Chris Evans - Captain America 2 press conference (cropped).jpg",
+      "Chris Evans C2E2 2023 1 (cropped).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Chris_Evans_%28actor%29"
   },
   {
     "id": "chris-hemsworth",
     "name": "Chris Hemsworth",
-    "file": "Chris_Hemsworth_-_Crime_101.jpg"
+    "file": "Chris_Hemsworth_-_Crime_101.jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Chris Hemsworth by Gage Skidmore.jpg",
+      "Chris Hemsworth by Gage Skidmore 3.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Chris_Hemsworth"
   },
   {
     "id": "daniel-radcliffe",
     "name": "Daniel Radcliffe",
-    "file": "DanielRadcliffe.jpg"
+    "file": "DanielRadcliffe.jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Daniel Radcliffe.jpg",
+      "Daniel Radcliffe 2013.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Daniel_Radcliffe"
   },
   {
     "id": "elizabeth-olsen",
     "name": "Elizabeth Olsen",
-    "file": "ElizabethOlsen-TIFF2025-02_(cropped).png"
+    "file": "ElizabethOlsen-TIFF2025-02_(cropped).png",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Elizabeth Olsen TIFF 2011a (cropped).jpg",
+      "Elizabeth Olsen by Gage Skidmore 2.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Elizabeth_Olsen"
   },
   {
     "id": "emma-watson",
     "name": "Emma Watson",
-    "file": "Emma_Watson_2013.jpg"
+    "file": "Emma_Watson_2013.jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Emma Watson 2, 2013.jpg",
+      "Emma Watson 2012 Shankbone.JPG"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Emma_Watson"
   },
   {
     "id": "gal-gadot",
     "name": "Gal Gadot",
-    "file": "Gal_Gadot_by_Gage_Skidmore_3.jpg"
+    "file": "Gal_Gadot_by_Gage_Skidmore_3.jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Gal Gadot SDCC 2014.jpg",
+      "Gal Gadot for Revlon 5.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Gal_Gadot"
   },
   {
     "id": "hailee-steinfeld",
     "name": "Hailee Steinfeld",
-    "file": "Hailee_Steinfeld_by_Gage_Skidmore.jpg"
+    "file": "Hailee_Steinfeld_by_Gage_Skidmore.jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Hailee Steinfeld 4 (43005821651) (cropped).jpg",
+      "Hailee Steinfeld Peabody Award 2020.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Hailee_Steinfeld"
   },
   {
     "id": "henry-cavill",
     "name": "Henry Cavill",
-    "file": "Henry_Cavill_(48417913146)_(cropped).jpg"
+    "file": "Henry_Cavill_(48417913146)_(cropped).jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Henry Cavill (28487498052) (cropped).jpg",
+      "Henry Cavill Man of Steel Comic Con 2013 1 (cropped).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Henry_Cavill"
   },
   {
     "id": "jenna-ortega",
     "name": "Jenna Ortega",
-    "file": "Jenna_Ortega-63799_(cropped).jpg"
+    "file": "Jenna_Ortega-63799_(cropped).jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Jenna Ortega at the 2026 Sundance Film Festival (cropped).jpg",
+      "Jenna Ortega 2025 (3).png"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Jenna_Ortega"
   },
   {
     "id": "jennifer-lawrence",
     "name": "Jennifer Lawrence",
-    "file": "Jennifer_Lawrence,_Cannes_Film_Festival_2025.jpg"
+    "file": "Jennifer_Lawrence,_Cannes_Film_Festival_2025.jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Jennifer Lawrence Oscars 2016.jpg",
+      "Jennifer Lawrence at San Diego Comic-Con 2015.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Jennifer_Lawrence"
   },
   {
     "id": "keanu-reeves",
     "name": "Keanu Reeves",
-    "file": "Keanu_Reeves_at_TIFF_2025_02_(Cropped).jpg"
+    "file": "Keanu_Reeves_at_TIFF_2025_02_(Cropped).jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Reunião com o ator norte-americano Keanu Reeves (46806576944) (cropped).jpg",
+      "Keanu Reeves (Berlin Film Festival 2009) 2.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Keanu_Reeves"
   },
   {
     "id": "leonardo-dicaprio",
     "name": "Leonardo DiCaprio",
-    "file": "LeoPTABFI191125-28_(cropped).jpg"
+    "file": "LeoPTABFI191125-28_(cropped).jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Leonardo DiCaprio.jpeg",
+      "Leonardo DiCaprio 2014.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Leonardo_DiCaprio"
   },
   {
     "id": "lupita-nyongo",
     "name": "Lupita Nyong'o",
-    "file": "LupitaNyongo-byPhilipRomano3.jpg"
+    "file": "LupitaNyongo-byPhilipRomano3.jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Lupita Nyong'o (82038) (cropped).jpg",
+      "Lupita Nyong'o by Gage Skidmore.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Lupita_Nyong%27o"
   },
   {
     "id": "margot-robbie",
     "name": "Margot Robbie",
-    "file": "Margot_Robbie_Wuthering_Heights_premiere_(cropped).jpg"
+    "file": "Margot_Robbie_Wuthering_Heights_premiere_(cropped).jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Margot Robbie 2019 by Glenn Francis (cropped).jpg",
+      "Margot Robbie by Gage Skidmore.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Margot_Robbie"
   },
   {
     "id": "michael-b-jordan",
     "name": "Michael B. Jordan",
-    "file": "Michael_B_Jordan_-_Sinners_(cropped).jpg"
+    "file": "Michael_B_Jordan_-_Sinners_(cropped).jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "2018-05-12- Cannes-L'acteur Michael B. Jordan-2721 (42075892224).jpg",
+      "Michael B. Jordan by Gage Skidmore 3.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Michael_B._Jordan"
   },
   {
     "id": "natalie-portman",
     "name": "Natalie Portman",
-    "file": "NataliePortman.jpg"
+    "file": "NataliePortman.jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Natalie Portman (48470988352).jpg",
+      "Natalie Portman Cannes 2008.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Natalie_Portman"
   },
   {
     "id": "oscar-isaac",
     "name": "Oscar Isaac",
-    "file": "Oscar_Isaac_at_82nd_Venice_International_Film_Festival-1_(cropped).jpg"
+    "file": "Oscar_Isaac_at_82nd_Venice_International_Film_Festival-1_(cropped).jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Oscar Isaac (30694590031).jpg",
+      "Oscar Isaac at the New York Premiere of Won't Back Down, September 2012.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Oscar_Isaac"
   },
   {
     "id": "pedro-pascal",
     "name": "Pedro Pascal",
-    "file": "Pedro_Pascal_at_the_2026_New_York_Film_Festival-042.jpg"
+    "file": "Pedro_Pascal_at_the_2026_New_York_Film_Festival-042.jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Pedro Pascal (14588037218).jpg",
+      "Pedro Pascal (36124158715).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Pedro_Pascal"
   },
   {
     "id": "robert-downey-jr",
     "name": "Robert Downey Jr.",
-    "file": "RobertDowneyJr-byPhilipRomano7_(cropped).jpg"
+    "file": "RobertDowneyJr-byPhilipRomano7_(cropped).jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Robert Downey Jr-2008 cropped.JPG",
+      "Robert Downey Jr. 2014 Comic-Con.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Robert_Downey_Jr."
   },
   {
     "id": "robert-pattinson",
     "name": "Robert Pattinson",
-    "file": "Robert_Pattinson_Venice_Film_Festival_(cropped).jpg"
+    "file": "Robert_Pattinson_Venice_Film_Festival_(cropped).jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Robert Pattinson at Berlinale 2025.jpg",
+      "Robert Pattinson Cannes 2014.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Robert_Pattinson"
   },
   {
     "id": "ryan-reynolds",
     "name": "Ryan Reynolds",
-    "file": "Deadpool_2_Japan_Premiere_Red_Carpet_Ryan_Reynolds_(cropped).jpg"
+    "file": "Deadpool_2_Japan_Premiere_Red_Carpet_Ryan_Reynolds_(cropped).jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Ryan Reynolds by Gage Skidmore 4.jpg",
+      "Ryan Reynolds at the 2025 Toronto International Film Festival (cropped).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Ryan_Reynolds"
   },
   {
     "id": "saoirse-ronan",
     "name": "Saoirse Ronan",
-    "file": "MKr349648_Saoirse_Ronan_(The_Outrun,_Berlinale_2024).jpg"
+    "file": "MKr349648_Saoirse_Ronan_(The_Outrun,_Berlinale_2024).jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Saoirse Ronan in 2018.png",
+      "Saoirse Ronan in 2024 (cropped).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Saoirse_Ronan"
   },
   {
     "id": "scarlett-johansson",
     "name": "Scarlett Johansson",
-    "file": "Scarlett_Johansson-8588.jpg"
+    "file": "Scarlett_Johansson-8588.jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Ghost In The Shell World Premiere Red Carpet, Scarlett Johansson (cropped).JPG",
+      "Goldene Kamera 2012 - Scarlett Johansson 3 (cropped, 2).JPG"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Scarlett_Johansson"
   },
   {
     "id": "sydney-sweeney",
     "name": "Sydney Sweeney",
-    "file": "Sydney_Sweeney_at_the_2024_Toronto_International_Film_Festival_01_(3x4_cropped_and_rotated).jpg"
+    "file": "Sydney_Sweeney_at_the_2024_Toronto_International_Film_Festival_01_(3x4_cropped_and_rotated).jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Sydney Sweeney at Berlinale 2023 (portrait).jpg",
+      "Sydney Sweeney.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Sydney_Sweeney"
   },
   {
     "id": "tom-holland",
     "name": "Tom Holland",
-    "file": "TomHolland-byPhilipRomano.jpg"
+    "file": "TomHolland-byPhilipRomano.jpg",
+    "collection": "actors",
+    "additionalFiles": [
+      "Tom Holland by Gage Skidmore.jpg",
+      "Tom Holland during pro-am Wentworth golf club 2023-2 (cropped).jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Tom_Holland"
   },
   {
     "id": "zoe-saldaña",
     "name": "Zoe Saldaña",
-    "file": "Zoe_Saldaña_at_the_2024_Toronto_International_Film_Festival_(cropped).jpg"
+    "file": "Zoe_Saldaña_at_the_2024_Toronto_International_Film_Festival_(cropped).jpg",
+    "collection": "actresses",
+    "additionalFiles": [
+      "Zoe Saldana (Headshot).jpg",
+      "Zoe Saldana.jpg"
+    ],
+    "collectionSourceUrl": "https://en.wikipedia.org/wiki/Zoe_Salda%C3%B1a"
   }
 ]

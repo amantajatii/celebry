@@ -190,3 +190,9 @@ def test_truncated_multipart_closes_unfinished_disk_spool(client, monkeypatch):
     response=client.post('/api/match',content=body,headers={'Content-Type':'multipart/form-data; boundary=x'})
     assert response.status_code in (400,422)
     assert created and all(spool.closed for spool in created)
+
+
+def test_invalid_collection_is_rejected_before_inference(client):
+    response=client.post('/api/match',files={'photo':('photo.png',picture(),'image/png')},data={'consent':'true','collection':'unknown'})
+    assert response.status_code==422
+    assert response.json()['error']['code']=='INVALID_COLLECTION'

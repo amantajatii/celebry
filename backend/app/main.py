@@ -161,7 +161,8 @@ def create_app(matcher=None):
               openapi_extra={'requestBody': {'required': True, 'content': {'multipart/form-data': {'schema': {
                   'type': 'object', 'required': ['photo', 'consent'], 'properties': {
                       'photo': {'type': 'string', 'format': 'binary'},
-                      'consent': {'type': 'string', 'enum': ['true']}}}}}}})
+                      'consent': {'type': 'string', 'enum': ['true']},
+                      'collection': {'type': 'string', 'enum': ['all', 'actors', 'actresses'], 'default': 'all'}}}}}}})
     async def match(request: Request):
         if processing_slots.locked():
             raise APIError(503, 'MATCHING_BUSY', 'Analysis is busy. Please try again shortly.')
@@ -210,15 +211,19 @@ def create_app(matcher=None):
         async def stream():
             yield bytes(body)
 
-        parser = MultiPartParser(request.headers, stream(), max_files=1, max_fields=1, max_part_size=1024)
+        parser = MultiPartParser(request.headers, stream(), max_files=1, max_fields=2, max_part_size=1024)
         try:
             try:
                 form = await parser.parse()
             except (MultiPartException, MultipartParseError):
                 raise APIError(400, 'INVALID_MULTIPART', 'Send one photo and one consent field.') from None
             try:
-                if set(form.keys()) != {'photo', 'consent'} or len(form.multi_items()) != 2:
-                    raise APIError(422, 'INVALID_FIELDS', 'Provide exactly one photo and consent field.')
+                keys = set(form.keys())
+                if not {'photo', 'consent'} <= keys or not keys <= {'photo', 'consent', 'collection'} or len(form.multi_items()) != len(keys):
+                    raise APIError(422, 'INVALID_FIELDS', 'Provide one photo, consent, and an optional collection.')
+                collection = form.get('collection', 'all')
+                if not isinstance(collection, str) or collection not in {'all', 'actors', 'actresses'}:
+                    raise APIError(422, 'INVALID_COLLECTION', 'Choose all celebrities, actors, or actresses.')
                 if form.get('consent') != 'true':
                     raise APIError(422, 'CONSENT_REQUIRED', 'Explicit consent is required before processing a photo.')
                 photo = form.get('photo')
@@ -234,7 +239,7 @@ def create_app(matcher=None):
                 spool.close()
         if app.state.matcher is None:
             raise APIError(503, 'MATCHING_NOT_READY', 'Matching requires compatible local models and a licensed celebrity catalog. No analysis was performed.')
-        return await run_in_threadpool(app.state.matcher.match, data)
+        return await run_in_threadpool(app.state.matcher.match, data, collection)
 
     return app
 

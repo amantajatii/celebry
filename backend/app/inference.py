@@ -13,7 +13,7 @@ from threading import Lock
 import numpy as np
 from PIL import Image, ImageOps
 
-from .contracts import APIError, Celebrity, Match, MatchResponse
+from .contracts import APIError, Celebrity, Collection, Match, MatchResponse
 
 DIMENSIONS = 512
 PIPELINE = 'celebry-arcface-v1:exif-rgb-bgr:max1600:det640:threshold0.5'
@@ -100,14 +100,19 @@ class Matcher:
             raise ValueError('Catalog dimensions do not match its metadata')
         self.embeddings = np.stack([unit_vector(row) for row in matrix])
 
-    def match(self, data: bytes):
+    def match(self, data: bytes, collection: Collection = 'all'):
         if not self.lock.acquire(blocking=False):
             raise APIError(503, 'MATCHING_BUSY', 'Analysis is busy. Please try again shortly.')
         try:
+            if collection not in {'all', 'actors', 'actresses'}:
+                raise APIError(422, 'INVALID_COLLECTION', 'Choose all celebrities, actors, or actresses.')
+            eligible = np.array([i for i, person in enumerate(self.celebrities) if collection == 'all' or person.collection == collection], dtype=int)
+            if len(eligible) < 5:
+                raise APIError(503, 'COLLECTION_NOT_READY', 'This collection needs at least five enrolled celebrities.')
             query = unit_vector(self.encoder.encode(data))
             scores = np.clip(self.embeddings @ query, -1, 1)
-            order = np.argsort(-scores, kind='stable')[:5]
-            return MatchResponse(catalogSize=len(self.celebrities), matches=[Match(rank=rank, celebrity=self.celebrities[int(i)],
+            order = eligible[np.argsort(-scores[eligible], kind='stable')[:5]]
+            return MatchResponse(catalogSize=len(eligible), collection=collection, matches=[Match(rank=rank, celebrity=self.celebrities[int(i)],
                                                cosineSimilarity=float(scores[i]))
                                           for rank, i in enumerate(order, 1)])
         finally:
