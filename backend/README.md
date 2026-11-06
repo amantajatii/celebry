@@ -1,4 +1,4 @@
-# Celebry backend (Phase 3)
+# Celebry backend (Phase 5)
 
 Run from `backend/` with Python 3.12:
 
@@ -95,9 +95,9 @@ export CELEBRY_CATALOG="$PWD/data/celebrities.npz"
 .venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --no-proxy-headers
 ```
 
-The setup downloads five public Hollywood references from Wikimedia Commons: Zendaya, Timothée Chalamet, Florence Pugh, Emma Stone, and Ryan Gosling. It retrieves author, source URL, license, and license URL; refuses unreviewed license names; and records the downloaded image SHA-256. `data/hollywood-sources.json` records the sources used in this run. Image bytes and generated embeddings stay ignored by Git. Retain attribution and applicable share-alike terms when distributing references. Runtime public metadata includes the image source and credits.
+The setup prepares 35 public Hollywood references from Wikimedia Commons, with selections in `data/sources.json`. Existing verified downloads are reused; metadata is fetched in a batch and rate-limited responses are retried with backoff. It retrieves author, source URL, license, and license URL; refuses unreviewed license names; and records the downloaded image SHA-256. `data/hollywood-sources.json` records the sources used in this run. Image bytes and generated embeddings stay ignored by Git. Retain attribution and applicable share-alike terms when distributing references. Runtime public metadata includes the image source and credits.
 
-For expansion, add reviewed source entries to `scripts/prepare_dataset.py` or prepare a manifest with the same fields. Rebuild the catalog, then restart the API. Each subject must have a unique ID and exactly one detected face. The current MVP deliberately uses one reference per subject. This is a tiny, nonrepresentative research catalog, not a validated resemblance benchmark.
+For expansion, add reviewed source entries to `data/sources.json` or prepare a manifest with the same fields. Rebuild the catalog, then restart the API. Each subject must have a unique ID and exactly one detected face. The current MVP deliberately uses one reference per subject. This is a tiny, nonrepresentative research catalog, not a validated resemblance benchmark.
 
 ### Pipeline and score definition
 
@@ -112,7 +112,7 @@ Higher cosine indicates closer model embeddings. The raw value is **not a percen
 
 Catalogs contain metadata, a finite 512D vector per subject, and a fingerprint combining model-file SHA-256 inputs with the preprocessing version. Startup rejects incompatible models, broken vectors, duplicate IDs, or fewer than five references. Rebuild after changing models or preprocessing. Models/catalog load once per API process, and inference runs in a worker thread. A nonblocking lock limits model execution to one request per process and returns `MATCHING_BUSY` for concurrent inference.
 
-Catalog publication is atomic. API uploads are never added to the catalog; no selfie or query embedding is retained. NumPy linear search is intentional for five subjects; pgvector is not needed at this size.
+Catalog publication is atomic. API uploads are never added to the catalog; no selfie or query embedding is retained. NumPy linear search is intentional for 35 subjects; pgvector is not needed at this size.
 
 Successful response fields are documented in `/docs` (`MatchResponse`). Example structure only, with no invented score:
 
@@ -139,3 +139,17 @@ Source APIs verified against:
 - https://github.com/deepinsight/insightface/blob/master/python-package/insightface/app/face_analysis.py
 
 Frontend `/match` now calls these endpoints using `NEXT_PUBLIC_API_BASE_URL`. It sends a photo only after consent and renders real top-five results. See the root README for the Phase 4 setup and HTTP integration test.
+
+
+## Phase 5 operational limits and public photos
+
+- `CELEBRY_MAX_PROCESSING`: maximum simultaneous upload/decode/inference requests per process, default 2. Excess requests return 503 before reading an upload.
+- `CELEBRY_UPLOAD_TIMEOUT_SECONDS`: total body-read deadline, default 30 seconds. Expiry returns HTTP 408 `UPLOAD_TIMEOUT`.
+- `CELEBRY_INFERENCE_THREADS`: ONNX intra-op thread count, default 2; inter-op count is 1. Optional ONNX telemetry is disabled.
+- `CELEBRY_REQUIRE_READY=true`: fail startup rather than serve without compatible models/catalog; enabled in Docker.
+- `GET /api/ready`: 200 with enrolled count when ready, otherwise 503. `GET /api/health` remains liveness.
+- `GET /media/celebrities/{id}.jpg`: public JPEG display thumbnail, max 500×700, with one-day public caching. Unknown IDs return 404. Only curated celebrity IDs are served; no file paths or user uploads are accepted.
+
+Catalog generation now includes resized, EXIF-oriented JPEG display photos along with metadata and embeddings. Rebuild older catalogs before starting the new backend; missing display photos make readiness fail. No user photo or embedding is ever added to this archive. Image source/license metadata is retained and displayed by the frontend. Match responses also expose `catalogSize` to explain the ranking context, never embeddings or private photo data.
+
+Production-style local Docker setup, headers, ingress limits, CI, verification results, and explicit limitations are documented in [Phase 5](../docs/phase-5.md). Run direct Uvicorn with `--no-proxy-headers`; the unpublished Docker API trusts only its container network where the gateway overwrites forwarding headers.

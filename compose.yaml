@@ -1,0 +1,71 @@
+name: celebry
+services:
+  web:
+    image: celebry-web:local
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_API_BASE_URL: /
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /app/.next/cache:size=64m,uid=1000,gid=1000,mode=0700
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 512m
+    cpus: 1
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3000/match').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    networks: [private]
+  api:
+    image: celebry-api:local
+    build: ./backend
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 1g
+    cpus: 2
+    environment:
+      CELEBRY_CORS_ORIGINS: ${CELEBRY_ORIGIN:-http://localhost:8080}
+      CELEBRY_RATE_LIMIT: 10
+      CELEBRY_MAX_PROCESSING: 2
+      CELEBRY_UPLOAD_TIMEOUT_SECONDS: 30
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/ready', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      start_period: 60s
+      retries: 3
+    networks: [private]
+  gateway:
+    image: nginx:1.28-alpine
+    entrypoint: [nginx, -g, 'daemon off;']
+    restart: unless-stopped
+    ports:
+      - '${CELEBRY_BIND_ADDRESS:-127.0.0.1}:${CELEBRY_PORT:-8080}:8080'
+    volumes:
+      - ./deploy/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./deploy/routes.conf:/etc/nginx/routes.conf:ro
+      - ./deploy/listen-http.conf:/etc/nginx/listen.conf:ro
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+      - /var/cache/nginx:size=32m,mode=1777
+    security_opt: [no-new-privileges:true]
+    mem_limit: 128m
+    cpus: 1
+    depends_on:
+      api:
+        condition: service_healthy
+      web:
+        condition: service_healthy
+    networks: [private]
+networks:
+  private:

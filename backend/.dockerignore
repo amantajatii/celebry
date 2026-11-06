@@ -1,0 +1,13 @@
+**
+!requirements.txt
+!requirements-ml.txt
+!app/
+!app/**
+!logging.json
+!models/
+!models/buffalo_s/
+!models/buffalo_s/det_500m.onnx
+!models/buffalo_s/w600k_mbf.onnx
+!data/
+!data/celebrities.npz
+**/__pycache__/

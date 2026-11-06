@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-06",
+  "scope": "Local verification only; no public deployment",
+  "celebrities": 35,
+  "referenceSelfMatchChecks": 35,
+  "frontendClientTests": 6,
+  "backendTests": 39,
+  "browserTests": 26,
+  "browserProjects": [
+    "Chromium desktop 1280x800",
+    "Chromium iPhone 13 emulation 390x844"
+  ],
+  "axeScope": [
+    "WCAG 2 A",
+    "WCAG 2 AA",
+    "WCAG 2.1 AA"
+  ],
+  "labPerformance": {
+    "desktop": {
+      "lcpMs": 192,
+      "cls": 0,
+      "encodedScriptBytes": 146415
+    },
+    "mobile": {
+      "lcpMs": 252,
+      "cls": 0,
+      "encodedScriptBytes": 146415
+    },
+    "limitations": "Local unthrottled run, possibly warm image-server cache; not field INP or real-user Web Vitals"
+  },
+  "dependencyAudit": {
+    "npmKnownVulnerabilities": 0,
+    "pythonRuntimePackages": 36,
+    "pythonKnownVulnerabilities": 0,
+    "pythonSkippedPackages": 0
+  },
+  "gatewaySmoke": {
+    "readyCelebrities": 35,
+    "publicPhotoCache": "public, max-age=86400",
+    "oversizedRequestStatus": 413,
+    "concurrentFakeForwardedAddressRequests": 12,
+    "rateLimitedRequests": 10,
+    "acceptedInvalidTypeRequests": 2
+  },
+  "notVerified": [
+    "Physical mobile devices or Safari",
+    "Native OS share destination delivery",
+    "Public DNS/TLS or commercial model licensing",
+    "GitHub Actions remote run"
+  ],
+  "modelUse": "InsightFace supplied weights: non-commercial research only"
+}

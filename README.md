@@ -1,6 +1,6 @@
 # Celebry
 
-Find your famous twin. Celebry is an entertainment-focused Hollywood look-alike finder, with a Next.js frontend and independently deployed FastAPI inference backend. Phases 1–4 are implemented: the dedicated `/match` page now sends consenting uploads to real inference, renders five cosine-ranked results, and handles loading and errors. There is no fallback demo or random matching.
+Find your famous twin. Celebry is an entertainment-focused Hollywood look-alike finder, with a Next.js frontend and independently deployed FastAPI inference backend. Phases 1–5 are implemented for local use: the dedicated `/match` page now sends consenting uploads to real inference, renders five cosine-ranked results, and handles loading and errors. There is no fallback demo or random matching.
 
 ## Run locally
 
@@ -38,9 +38,9 @@ The frontend uses `NEXT_PUBLIC_API_BASE_URL`, default `http://127.0.0.1:8000`. C
 
 ## Matching and privacy
 
-The browser previews JPEG, PNG, and WebP files up to 10 MiB using a temporary object URL. Only clicking analysis after checking consent sends the original file to the backend. A new photo resets consent. Uploads and query embeddings are not retained or enrolled. There are no accounts, analytics uploads, or embedding fields in frontend responses. Celebrity image loads are separate public Wikimedia requests.
+The browser previews JPEG, PNG, and WebP files up to 10 MiB using a temporary object URL. Only clicking analysis after checking consent sends the original file to the backend. A new photo resets consent. Uploads and query embeddings are not retained or enrolled. There are no accounts, analytics uploads, or embedding fields in frontend responses. Result thumbnails are served locally by the backend; only the editorial landing photos use Wikimedia through Next.js image optimization. Public photos may be cached. Selfies and query embeddings are never added to that image cache.
 
-Results display the top five celebrities and **raw cosine similarity in [-1, 1]**, not a percentage or identity probability. Ranking is relative to a small five-celebrity catalog; resemblance quality on new users has not been benchmarked. Photo credits and applicable licenses are included with results. Research weights are not cleared for commercial deployment.
+Results display the top five celebrities and **raw cosine similarity in [-1, 1]**, not a percentage or identity probability. Ranking is relative to a 35-celebrity Hollywood catalog; resemblance quality on new users has not been benchmarked. Photo credits and applicable licenses are included with results. Research weights are not cleared for commercial deployment.
 
 Requests time out after 60 seconds and may be cancelled. Cancel aborts the browser request and prevents stale results from rendering; server-side work already started may still finish. Photo previews are revoked on replacement/unmount, and results stay in memory only. “Share my results” opens native text sharing where supported; otherwise it copies result text. It does not upload the selfie or create a public results URL.
 
@@ -59,4 +59,10 @@ With the backend running and real local models/catalog prepared, run the opt-in 
 CELEBRY_LIVE_API_TEST=1 npm test
 ```
 
-It uses a public celebrity reference through the actual frontend API client, checks real top-five ranking, cache controls, and browser CORS. It does not exercise browser rendering. A native Chrome check also verified empty-upload validation, required consent, public-reference upload, and rendering of five real results. Mobile rendering, cancellation during slow inference, and native sharing still need browser coverage. Backend real-model detection tests are documented separately. Phase 5 still covers production deployment, shared rate limiting, operational hardening, and broader accessibility/performance testing.
+It uses a public celebrity reference through the actual frontend API client, checks real top-five ranking, cache controls, and browser CORS. It does not exercise browser rendering. A native Chrome check also verified empty-upload validation, required consent, public-reference upload, and rendering of five real results. Desktop and mobile Chromium tests now cover layout, cancellation of slow requests, native share payloads, and clipboard fallback. Backend real-model detection tests are documented separately. Phase 5 adds local Docker verification, shared gateway rate limiting, operational limits, self-hosted fonts, and browser/accessibility/performance tests; no public deployment has been performed. See [Phase 5 verification](docs/phase-5.md).
+
+## Expanded collection and local readiness
+
+The catalog contains 35 real Hollywood celebrities, including Margot Robbie, Emma Watson, Scarlett Johansson, Tom Holland, Henry Cavill, Chris Evans, Chris Hemsworth, Ryan Reynolds, Leonardo DiCaprio, and Pedro Pascal. Source and licensing records are in `backend/data/hollywood-sources.json`. Rebuild the catalog after changing sources or upgrading from the older catalog without display thumbnails.
+
+Optional local production stack: `docker compose up --build -d`, then open http://localhost:8080. Stop with `docker compose down`. This is local-only by default. See [docs/phase-5.md](docs/phase-5.md) for repeatable checks, limits, and remaining public-release requirements.
